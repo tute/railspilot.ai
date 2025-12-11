@@ -296,6 +296,14 @@
           <p class="about-note">
             We're piloting with select early clients. You get our full attention and direct access.
           </p>
+
+          <div class="founder-credit">
+            <span class="founder-label">Founded by</span>
+            <a href="https://www.tutecosta.com/" target="_blank" rel="noopener" class="founder-link">
+              Tute Costa
+            </a>
+            <span class="founder-title">Staff Software Engineer</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1123,6 +1131,44 @@
         margin-top: 32px;
         color: var(--muted);
         font-style: italic;
+      }
+
+      .founder-credit {
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 2px dashed var(--border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .founder-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .founder-link {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .founder-link:hover {
+        color: var(--accent);
+        transform: scale(1.05);
+      }
+
+      .founder-title {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        font-weight: 600;
       }
 
       /* FAQ */
