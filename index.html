@@ -394,6 +394,22 @@
         });
 
         reveals.forEach(el => observer.observe(el));
+
+        // Dynamic scroll gradients for table
+        const tableWrapper = document.querySelector('.table-wrapper');
+        if (tableWrapper) {
+          function updateScrollGradients() {
+            const { scrollLeft, scrollWidth, clientWidth } = tableWrapper;
+            const isAtStart = scrollLeft <= 1;
+            const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 1;
+
+            tableWrapper.classList.toggle('scrolled-left', !isAtStart);
+            tableWrapper.classList.toggle('scrolled-right', !isAtEnd);
+          }
+          updateScrollGradients();
+          tableWrapper.addEventListener('scroll', updateScrollGradients);
+          window.addEventListener('resize', updateScrollGradients);
+        }
       });
     </script>
   </body>
