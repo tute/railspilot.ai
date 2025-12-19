@@ -120,7 +120,7 @@ a:hover {
   content: '';
   position: absolute;
   top: 15%;
-  left: 8%;
+  left: 5%;
   width: 80px;
   height: 80px;
   background-image: url('logo.png');
@@ -1043,6 +1043,22 @@ footer p {
     padding: 80px 20px 60px;
   }
 
+  /* Fix logo positioning on mid-sized screens */
+  .hero::before {
+    width: 50px;
+    height: 50px;
+    top: 5px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 17px;
+
+    .card {
+      padding: 24px 18px;
+    }
+  }
+
   .feature-box {
     padding: 32px 24px;
   }
@@ -1050,5 +1066,4 @@ footer p {
   .pilot-box {
     padding: 32px 24px;
   }
-
 }
