@@ -24,7 +24,6 @@ RailsPilot offers production-ready Rails features delivered weekly, combining St
 ### Design Elements
 
 - Responsive layout for mobile and desktop
-- Smooth scroll-triggered reveal animations
 - Custom comparison table with scroll gradients
 - Clean, minimal design with custom color palette
 

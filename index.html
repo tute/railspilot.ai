@@ -40,7 +40,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Challenge</span>
@@ -49,15 +49,15 @@
         <p class="lead-text">You need Rails development that starts immediately, makes good architectural decisions, and doesn't lock you into long-term commitments.</p>
 
         <div class="grid-3">
-          <div class="card reveal">
+          <div class="card">
             <h4>Hiring Takes Forever</h4>
             <p>3-4 month search plus 1-2 month onboarding. Your backlog grows while you wait.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Consultancies Are Expensive</h4>
             <p>$150-200/hour adds up fast. Monthly spend is unpredictable.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>AI Tools Need Supervision</h4>
             <p>Still requires someone to configure, review, steer, and integrate properly.</p>
           </div>
@@ -67,7 +67,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Offering</span>
@@ -99,7 +99,7 @@
         <h3 class="subsection-title">What We Build</h3>
 
         <div class="grid-symmetric">
-          <div class="card reveal">
+          <div class="card">
             <h4>Architecture</h4>
             <ul>
               <li>Database schema design</li>
@@ -109,7 +109,7 @@
               <li>ADR documents <span class="tooltip-trigger" tabindex="0">ⓘ<span class="tooltip-text">An Architecture Decision Record<br>counts as 3 features</span></span></li>
             </ul>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Features</h4>
             <ul>
               <li>CRUD endpoints</li>
@@ -119,7 +119,7 @@
               <li>Authentication flows</li>
             </ul>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Developer eXperience</h4>
             <ul>
               <li>Performance optimizations</li>
@@ -145,7 +145,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Comparison</span>
@@ -195,7 +195,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="alt-bg reveal">
+    <section class="alt-bg">
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Fit</span>
@@ -229,7 +229,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Process</span>
@@ -238,37 +238,37 @@
 
         <div class="process-flow">
           <div class="process-line"></div>
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">1</div>
             <div class="process-label">Your Backlog</div>
             <div class="process-time">Issues ready</div>
           </div>
 
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">2</div>
             <div class="process-label">Planning Call</div>
             <div class="process-time">1-2 hours</div>
           </div>
 
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">3</div>
             <div class="process-label">AI Agent</div>
             <div class="process-time">Writes code</div>
           </div>
 
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">4</div>
             <div class="process-label">Staff Review</div>
             <div class="process-time">Every change</div>
           </div>
 
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">5</div>
             <div class="process-label">PRs Ready</div>
             <div class="process-time">24-72 hours</div>
           </div>
 
-          <div class="process-step reveal">
+          <div class="process-step">
             <div class="process-number">6</div>
             <div class="process-label">AI Learns</div>
             <div class="process-time">Lessons encoded</div>
@@ -286,7 +286,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">The Team</span>
@@ -322,7 +322,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="alt-bg reveal">
+    <section class="alt-bg">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Questions</span>
@@ -389,24 +389,8 @@
     </footer>
 
     <script>
-      // Intersection Observer for reveal animations
+      // Dynamic scroll gradients for table
       document.addEventListener('DOMContentLoaded', function() {
-        const reveals = document.querySelectorAll('.reveal');
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        });
-
-        reveals.forEach(el => observer.observe(el));
-
-        // Dynamic scroll gradients for table
         const tableWrapper = document.querySelector('.table-wrapper');
         if (tableWrapper) {
           function updateScrollGradients() {
