@@ -1,0 +1,136 @@
+<svg viewBox="0 0 680 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="680" height="540" fill="#FAFAFA" rx="8"/>
+
+  <!-- Title -->
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Cada presupuesto, un mundo aparte</text>
+
+  <!-- Source documents — simplified: header + provider name only -->
+  <!-- PDF Prov A -->
+  <rect x="30" y="65" width="120" height="70" rx="4" fill="#FFF" stroke="#E53E3E" stroke-width="1.5"/>
+  <rect x="30" y="65" width="120" height="28" rx="4" fill="#E53E3E"/>
+  <text x="90" y="84" text-anchor="middle" font-size="14" fill="#FFF" font-weight="600">PDF</text>
+  <text x="90" y="114" text-anchor="middle" font-size="13" fill="#777">Proveedor A</text>
+
+  <!-- Mail Prov B -->
+  <rect x="170" y="65" width="120" height="70" rx="4" fill="#FFF" stroke="#3182CE" stroke-width="1.5"/>
+  <rect x="170" y="65" width="120" height="28" rx="4" fill="#3182CE"/>
+  <text x="230" y="84" text-anchor="middle" font-size="14" fill="#FFF" font-weight="600">Mail</text>
+  <text x="230" y="114" text-anchor="middle" font-size="13" fill="#777">Proveedor B</text>
+
+  <!-- Planilla Prov C -->
+  <rect x="310" y="65" width="120" height="70" rx="4" fill="#FFF" stroke="#38A169" stroke-width="1.5"/>
+  <rect x="310" y="65" width="120" height="28" rx="4" fill="#38A169"/>
+  <text x="370" y="84" text-anchor="middle" font-size="14" fill="#FFF" font-weight="600">Planilla</text>
+  <text x="370" y="114" text-anchor="middle" font-size="13" fill="#777">Proveedor C</text>
+
+  <!-- PDF Prov D -->
+  <rect x="450" y="65" width="120" height="70" rx="4" fill="#FFF" stroke="#D69E2E" stroke-width="1.5"/>
+  <rect x="450" y="65" width="120" height="28" rx="4" fill="#D69E2E"/>
+  <text x="510" y="84" text-anchor="middle" font-size="14" fill="#FFF" font-weight="600">PDF</text>
+  <text x="510" y="114" text-anchor="middle" font-size="13" fill="#777">Proveedor D</text>
+
+  <!-- Arrows down to person -->
+  <line x1="90" y1="137" x2="280" y2="180" stroke="#AAA" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="230" y1="137" x2="290" y2="180" stroke="#AAA" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="370" y1="137" x2="320" y2="180" stroke="#AAA" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="510" y1="137" x2="330" y2="180" stroke="#AAA" stroke-width="1" stroke-dasharray="4"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#AAA"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#E53E3E"/>
+    </marker>
+  </defs>
+
+  <!-- Person doing manual work -->
+  <circle cx="305" cy="198" r="18" fill="#F7FAFC" stroke="#718096" stroke-width="1.5"/>
+  <text x="305" y="204" text-anchor="middle" font-size="16">😓</text>
+  <text x="305" y="234" text-anchor="middle" font-size="13" fill="#718096">Cotejo manual</text>
+
+  <!-- Arrow to spreadsheet -->
+  <line x1="305" y1="244" x2="305" y2="264" stroke="#AAA" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Growing spreadsheet (messy) -->
+  <rect x="70" y="270" width="460" height="145" rx="4" fill="#FFF" stroke="#CBD5E0" stroke-width="1.5"/>
+  <text x="300" y="292" text-anchor="middle" font-size="14" font-weight="600" fill="#555">La planilla que nunca cierra</text>
+
+  <!-- Table grid -->
+  <line x1="88" y1="302" x2="515" y2="302" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="320" x2="515" y2="320" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="338" x2="515" y2="338" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="356" x2="515" y2="356" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="374" x2="515" y2="374" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="392" x2="515" y2="392" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="88" y1="405" x2="515" y2="405" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <!-- Vertical lines -->
+  <line x1="185" y1="298" x2="185" y2="408" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="280" y1="298" x2="280" y2="408" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="375" y1="298" x2="375" y2="408" stroke="#E2E8F0" stroke-width="0.5"/>
+  <line x1="460" y1="298" x2="460" y2="408" stroke="#E2E8F0" stroke-width="0.5"/>
+
+  <!-- Headers -->
+  <text x="136" y="315" text-anchor="middle" font-size="11" fill="#555" font-weight="600">Ítem</text>
+  <text x="232" y="315" text-anchor="middle" font-size="11" fill="#E53E3E" font-weight="600">Prov. A</text>
+  <text x="327" y="315" text-anchor="middle" font-size="11" fill="#3182CE" font-weight="600">Prov. B</text>
+  <text x="417" y="315" text-anchor="middle" font-size="11" fill="#38A169" font-weight="600">Prov. C</text>
+  <text x="487" y="315" text-anchor="middle" font-size="11" fill="#D69E2E" font-weight="600">D</text>
+
+  <!-- Data with problems -->
+  <text x="98" y="334" font-size="11" fill="#666">Línea prod.</text>
+  <text x="205" y="334" font-size="11" fill="#666">$4.2M</text>
+  <text x="300" y="334" font-size="11" fill="#E53E3E">???</text>
+  <text x="390" y="334" font-size="11" fill="#666">$3.8M</text>
+
+  <text x="98" y="352" font-size="11" fill="#666">Obra civil</text>
+  <text x="205" y="352" font-size="11" fill="#666">Incluido</text>
+  <text x="300" y="352" font-size="11" fill="#666">$890K</text>
+  <text x="390" y="352" font-size="11" fill="#E53E3E">No cotiza</text>
+
+  <text x="98" y="370" font-size="11" fill="#666">Transporte</text>
+  <text x="205" y="370" font-size="11" fill="#E53E3E">?</text>
+  <text x="300" y="370" font-size="11" fill="#666">$120K</text>
+  <text x="390" y="370" font-size="11" fill="#E53E3E">?</text>
+
+  <text x="98" y="388" font-size="11" fill="#AAA">Fundaciones</text>
+  <text x="205" y="388" font-size="11" fill="#AAA">¿en obra civil?</text>
+  <text x="300" y="388" font-size="11" fill="#AAA">Separado</text>
+  <text x="390" y="388" font-size="11" fill="#AAA">???</text>
+
+  <text x="98" y="404" font-size="11" fill="#CCC">... más filas</text>
+
+  <!-- Warning icons -->
+  <text x="475" y="334" font-size="11" fill="#E53E3E">-</text>
+  <text x="475" y="352" font-size="11" fill="#E53E3E">-</text>
+  <text x="475" y="370" font-size="11" fill="#E53E3E">-</text>
+  <text x="475" y="388" font-size="11" fill="#E53E3E">-</text>
+
+  <!-- Arrow down from spreadsheet to emails -->
+  <line x1="300" y1="417" x2="300" y2="445" stroke="#AAA" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Emails to suppliers section -->
+  <rect x="90" y="452" width="420" height="85" rx="6" fill="#FFF8F0" stroke="#DD6B20" stroke-width="1.5" stroke-dasharray="6 3"/>
+
+  <text x="300" y="474" text-anchor="middle" font-size="13" font-weight="600" fill="#DD6B20">Mails pidiendo aclaraciones</text>
+
+  <!-- Email icons — with margin below title -->
+  <text x="135" y="504" text-anchor="middle" font-size="18">📧</text>
+  <text x="235" y="504" text-anchor="middle" font-size="18">📧</text>
+  <text x="335" y="504" text-anchor="middle" font-size="18">📧</text>
+  <text x="435" y="504" text-anchor="middle" font-size="18">📧</text>
+
+  <text x="135" y="521" text-anchor="middle" font-size="10" fill="#DD6B20">Prov. A</text>
+  <text x="235" y="521" text-anchor="middle" font-size="10" fill="#DD6B20">Prov. B</text>
+  <text x="335" y="521" text-anchor="middle" font-size="10" fill="#DD6B20">Prov. C</text>
+  <text x="435" y="521" text-anchor="middle" font-size="10" fill="#DD6B20">Prov. D</text>
+
+  <!-- Loop back arrow from emails up to top boxes -->
+  <path d="M 515 490 C 560 490, 650 460, 650 300 C 650 140, 600 95, 572 95"
+        fill="none" stroke="#E53E3E" stroke-width="1.8" stroke-dasharray="5 3" marker-end="url(#arrowRed)"/>
+
+  <!-- Label on the loop-back arrow (vertical, rotated) -->
+  <text transform="translate(630, 295) rotate(90)" text-anchor="middle" font-size="12" fill="#E53E3E" font-weight="700">Vuelta al casillero 1</text>
+</svg>

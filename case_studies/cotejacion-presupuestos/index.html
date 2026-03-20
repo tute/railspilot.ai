@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente cotejador de presupuestos — RailsPilot</title>
+    <meta name="description" content="Presupuestos de varios proveedores en PDF, mail y planillas: normalización y comparación sin transcribir a mano. Caso de uso para equipos de ingeniería y compras.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  </head>
+  <body class="case-study">
+    <header class="case-header">
+      <div class="container">
+        <a href="../index.html">← RailsPilot</a>
+        <h1>Cotejador de presupuestos de distintos proveedores</h1>
+      </div>
+    </header>
+
+    <div class="article-wrap">
+      <div class="container">
+        <article class="article">
+          <h2>El problema</h2>
+
+          <p>Un equipo de ingeniería recibe cinco presupuestos por contratación. Bueno, tres; dos son PDFs con información de marketing genérico de la empresa. Cada proveedor manda su propuesta en su formato particular: uno en PDF, otro por mail, otro en una planilla Excel, otro en Word. Los ítems no coinciden exactamente, las unidades varían, y lo que un proveedor desglosa en diez líneas otro lo agrupa en tres.</p>
+
+          <p>Un ingeniero inicia una nueva planilla para esta contratación y empieza a extraer la información y ordenarla. La primera columna son los ítems del proveedor A. Cuando pasa al proveedor B, encuentra algunos ítems faltantes y otros que no encajan en las filas definidas por A, descripciones que parecen iguales pero no lo son, condiciones que aparecen en un pie de página y no en una celda. <strong>La planilla crece con cada proveedor, y cada dato agregado genera preguntas a presupuestos anteriores.</strong></p>
+
+          <p>Se envían mails con consultas generadas, se espera respuestas en pocos días (o se les recuerda que por favor respondan), se ajusta la planilla, y se repite. En un caso reciente este ciclo se repitió cuatro veces hasta llegar a tener suficiente información para decidir. Cada ronda insumió tiempo y esfuerzo de trabajo calificado.</p>
+
+          <figure>
+            <img src="diagrama-antes.svg" alt="Diagrama: hoy cada presupuesto llega en un formato distinto (PDF, mail, planilla) y la comparación es manual." width="800" height="500">
+          </figure>
+
+          <h2>Nuestra solución</h2>
+
+          <p>Armamos un agente cotejador que recibe los documentos de cada proveedor, entiende todos los formatos usuales, y los procesa de la siguiente manera:</p>
+
+          <ol>
+            <li><strong>Extrae información de los archivos.</strong> Identifica ítems cotizados, cantidades, precios unitarios, totales, y condiciones. Cuando no está seguro de que dos ítems con nombres distintos corresponden al mismo concepto, pregunta al ingeniero.</li>
+
+            <li><strong>Normaliza datos.</strong> Arma una estructura común donde cada ítem tiene similar granularidad. Si un proveedor agrupa lo que otro desglosa, el asistente lo señala en vez de forzar una falsa equivalencia. Si uno incluye transporte y otro no, marca la diferencia.</li>
+
+            <li><strong>Genera una planilla de comparación.</strong> Cada fila es un concepto y cada columna un proveedor, con diferencias y faltantes resaltados. No solo diferencias de precio: también diferencias de alcance, de plazos, de condiciones que afectan el costo real. En otra hoja compara condiciones de entrega (financiaciones, garantías, plazos de entrega, etc.).</li>
+
+            <li><strong>Escribe borradores de seguimiento para cada proveedor.</strong> Redacta mails con preguntas sugeridas, y marca una fecha esperada de respuesta (3 días hábiles para este equipo).</li>
+          </ol>
+
+          <p>El resultado es una planilla bien diseñada que alguien hubiera armado después de dos horas de trabajo, generada en pocos minutos. A medida que llegan nuevas respuestas, el agente modifica o agrega datos ordenadamente, facilitando el seguimiento.</p>
+
+          <figure>
+            <img src="diagrama-despues.svg" alt="Diagrama: los mismos documentos se normalizan en una tabla comparativa por proveedor." width="800" height="480">
+          </figure>
+
+          <p>El ahorro de tiempo es visible. La disminución de esfuerzo no queda tan a la vista: <strong>las preguntas que el equipo hace después son más completas y tienen seguimiento del agente</strong>. Si se envían varias preguntas a Proveedor A, otras a B, y más a C, el agente las recuerda (aunque parezcan de baja prioridad a un humano negociando las partes más significativas en los primeros intercambios).</p>
+
+
+          <h2>Dónde aplica el mismo patrón</h2>
+
+          <p>Este problema, recibir información equivalente en formatos distintos y tener que compararla, aparece en muchos contextos:</p>
+
+          <ul class="use-cases">
+            <li><strong>Cobertura médica.</strong> Una empresa evalúa tres planes de salud para su personal. Cada prepaga presenta su propuesta con distinta estructura: una desglosa por tipo de prestación, otra por grupo familiar, otra agrupa todo en un valor per cápita. Normalizando las propuestas, el área de recursos humanos compara costos reales por el mismo nivel de cobertura.</li>
+            <li><strong>Propuestas legales.</strong> Un directorio recibe ofertas de tres estudios jurídicos para llevar un caso. Cada uno presupuesta distinto: uno cobra por hora, otro un fijo mensual, otro un mix con éxito. Armar el comparativo sobre una base común permite evaluar el costo total estimado bajo distintos escenarios de duración.</li>
+            <li><strong>Eventos corporativos.</strong> Se piden tres cotizaciones para un evento de fin de año. Un proveedor incluye sonido en el precio del salón, otro lo cobra aparte, otro ofrece un paquete que incluye catering pero no decoración. La tabla normalizada muestra el costo real de cada opción completa.</li>
+            <li><strong>Compras de insumos.</strong> Una fábrica cotiza materia prima con cinco proveedores. Los precios varían, pero también los mínimos de compra, los plazos de entrega, y las condiciones de pago. La comparación que importa no es solo el precio por kilo, sino el costo total puesto en planta en el plazo que se necesita.</li>
+            <li><strong>Licitaciones públicas.</strong> Un organismo evalúa ofertas en un proceso de compra. Cada oferente presenta su documentación con distinto orden y nivel de detalle. Normalizar las ofertas contra el pliego permite verificar cumplimiento y comparar en menos tiempo, con menos riesgo de pasar algo por alto.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          <img src="../../logo.png" alt="" class="footer-logo">
+          <strong>RailsPilot</strong> — Tu equipo ya tiene la experiencia. La IA la multiplica.
+        </p>
+        <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length === 0) return;
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      });
+    </script>
+  </body>
+</html>
