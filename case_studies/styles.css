@@ -1,0 +1,117 @@
+@import url('../styles.css');
+
+.case-study .article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.case-study .article h1 {
+  margin-bottom: 24px;
+}
+
+.case-study .article h2 {
+  font-size: 1.6rem;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.case-study .article p {
+  margin-bottom: 1.25em;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.case-study .article p strong {
+  color: var(--text);
+}
+
+.case-study .article .lead {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.case-study figure {
+  margin: 40px 0;
+}
+
+.case-study figure img,
+.case-study figure object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+}
+
+.case-study .use-cases {
+  list-style: none;
+  margin: 24px 0;
+}
+
+.case-study .use-cases li {
+  margin-bottom: 24px;
+  padding-left: 0;
+}
+
+.case-study .use-cases li strong {
+  display: block;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.case-study .case-header {
+  padding: 80px 24px 48px;
+  text-align: center;
+  border-bottom: 2px dashed var(--border);
+}
+
+.case-study .case-header a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.case-study .article-wrap {
+  padding: 48px 24px 120px;
+}
+
+.case-study footer {
+  margin-top: 0;
+}
+
+.case-study .case-header .tagline {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  max-width: 640px;
+  margin: 2em auto 3em;
+  font-weight: 600;
+}
+
+.case-study .case-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-right: 48px;
+  margin-top: 24px;
+}
+
+.case-study .case-link:hover {
+  color: inherit;
+}
+
+.case-study .case-link .case-link-arrow {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform 0.2s ease;
+}
+
+.case-study .case-link:hover .case-link-arrow {
+  transform: translateY(-50%) translateX(4px);
+}
