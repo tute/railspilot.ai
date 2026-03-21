@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <style>
+    text { font-family: 'Nunito', 'Segoe UI', sans-serif; }
+    .title { font-size: 14px; font-weight: 700; fill: #1a1a2e; }
+    .label { font-size: 12px; font-weight: 600; fill: #555; }
+    .sublabel { font-size: 11px; fill: #888; }
+    .icon-text { font-size: 22px; }
+    .arrow { stroke: #2ec4b6; stroke-width: 2; fill: none; marker-end: url(#arrowhead-teal); }
+    .box { rx: 12; ry: 12; stroke-width: 2; }
+    .capture-box { fill: #f0fff4; stroke: #a8e8c0; }
+    .export-box { fill: #f0f4ff; stroke: #b8c9e8; }
+    .process-box { fill: #f5f0ff; stroke: #c8b8e8; }
+    .result-box { fill: #f0fff4; stroke: #80d4a0; }
+  </style>
+  <defs>
+    <marker id="arrowhead-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2ec4b6"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" class="title" font-size="16">Después: registrar en el momento, generar al final</text>
+
+  <!-- During the week: capture -->
+  <rect x="40" y="60" width="200" height="130" class="box capture-box"/>
+  <text x="140" y="85" text-anchor="middle" class="icon-text">👷🎤📸</text>
+  <text x="140" y="110" text-anchor="middle" class="title">Durante la semana</text>
+  <text x="140" y="128" text-anchor="middle" class="label">En obra, al WhatsApp:</text>
+  <text x="140" y="147" text-anchor="middle" class="sublabel">Notas de voz</text>
+  <text x="140" y="164" text-anchor="middle" class="sublabel">Fotos con contexto</text>
+  <text x="140" y="181" text-anchor="middle" class="sublabel">20 segundos cada una</text>
+
+  <!-- Arrow -->
+  <line x1="250" y1="125" x2="295" y2="125" class="arrow"/>
+
+  <!-- Export -->
+  <rect x="305" y="70" width="170" height="110" class="box export-box"/>
+  <text x="390" y="95" text-anchor="middle" class="icon-text">📤</text>
+  <text x="390" y="118" text-anchor="middle" class="title">Exportar chat</text>
+  <text x="390" y="136" text-anchor="middle" class="label">Un tap en WhatsApp</text>
+  <text x="390" y="155" text-anchor="middle" class="sublabel">Genera un .zip con</text>
+  <text x="390" y="170" text-anchor="middle" class="sublabel">audios, fotos y texto</text>
+
+  <!-- Arrow -->
+  <line x1="485" y1="125" x2="530" y2="125" class="arrow"/>
+
+  <!-- AI Processing -->
+  <rect x="540" y="60" width="220" height="130" class="box process-box"/>
+  <text x="650" y="85" text-anchor="middle" class="icon-text">🤖</text>
+  <text x="650" y="110" text-anchor="middle" class="title">Asistente genera informe</text>
+  <text x="650" y="130" text-anchor="middle" class="sublabel">1. Transcribe audios</text>
+  <text x="650" y="147" text-anchor="middle" class="sublabel">2. Procesa fotos</text>
+  <text x="650" y="164" text-anchor="middle" class="sublabel">3. Arma documento Word</text>
+  <text x="650" y="181" text-anchor="middle" class="sublabel">con formato de auditoría</text>
+
+  <!-- Arrow down -->
+  <line x1="650" y1="200" x2="650" y2="240" class="arrow"/>
+
+  <!-- Result -->
+  <rect x="460" y="250" width="300" height="110" class="box result-box"/>
+  <text x="610" y="278" text-anchor="middle" class="icon-text">✅📄</text>
+  <text x="610" y="303" text-anchor="middle" class="title">Informe completo</text>
+  <text x="610" y="323" text-anchor="middle" class="sublabel">Secciones por día, fotos embebidas,</text>
+  <text x="610" y="340" text-anchor="middle" class="sublabel">terminología técnica. El ingeniero revisa y firma.</text>
+
+  <!-- Time label -->
+  <rect x="40" y="280" width="200" height="50" rx="8" ry="8" fill="#e0ffe8" stroke="#80d4a0" stroke-width="1.5"/>
+  <text x="140" y="303" text-anchor="middle" class="title" fill="#2a7">⏱ Minutos</text>
+  <text x="140" y="320" text-anchor="middle" class="sublabel">de revisión, no de redacción</text>
+</svg>

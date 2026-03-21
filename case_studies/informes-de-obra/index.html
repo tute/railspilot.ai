@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informes de obra dictados desde el teléfono — RailsPilot</title>
+    <meta name="description" content="Un equipo de ingeniería dicta notas de voz y saca fotos en obra. Un asistente arma el informe semanal con formato, fotos embebidas y terminología técnica. El ingeniero revisa y firma.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  </head>
+  <body class="case-study">
+    <header class="case-header">
+      <div class="container">
+        <a href="../index.html">← RailsPilot</a>
+        <h1>Informes de obra dictados desde el teléfono</h1>
+      </div>
+    </header>
+
+    <div class="article-wrap">
+      <div class="container">
+        <article class="article">
+          <p class="lead">Un equipo de ingeniería visita obras en construcción durante la semana. Recorren, observan, toman decisiones en el momento. El viernes a la tarde, cuando ya están cansados, tienen que sentarse a redactar el informe semanal de avance. Reconstruir de memoria qué pasó el martes a las diez de la mañana no es fácil. Hacerlo con precisión técnica y formato de auditoría, menos.</p>
+
+          <p>Los informes de avance de obra no son opcionales. Son documentos que registran qué se hizo, qué se midió, qué se desvió del plan. Los lee el comitente, los revisa el director de obra, quedan como respaldo ante reclamos. Un informe mal hecho no es solo un trámite incompleto: es un riesgo.</p>
+
+          <p>El problema no es que el equipo no sepa qué escribir. <strong>El problema es que la información está en la cabeza de quien recorrió la obra, y sacarla de ahí lleva tiempo que compite con todo lo demás.</strong> Fotos sueltas en el carrete, notas mentales que se desdibujan, mediciones anotadas en un papel que quedó en la camioneta.</p>
+
+          <figure>
+            <img src="diagrama-antes.svg" alt="Diagrama: hoy el ingeniero recorre la obra, acumula notas mentales, y el viernes reconstruye todo de memoria en un documento Word." width="800" height="400">
+          </figure>
+
+          <h2>La solución: registrar en el momento, redactar después</h2>
+
+          <p>La idea fue simple. El equipo ya usaba WhatsApp en obra para coordinarse. Les pedimos que, además, mandaran notas de voz y fotos a un chat dedicado mientras recorrían. No un informe dictado, no algo formal: lo que les saliera en el momento. "Terminamos el hormigonado del eje 15, quedó bien el nivel." Una foto del encofrado. Un audio de cuarenta segundos sobre un desvío en la armadura.</p>
+
+          <p>Al final de la semana, exportan el chat de WhatsApp (una función que ya tiene la app) y lo suben a un sistema que armamos. El sistema hace tres cosas:</p>
+
+          <ol>
+            <li><strong>Transcribe los audios.</strong> Cada nota de voz se convierte a texto. El equipo habla en lenguaje técnico de obra y el transcriptor lo respeta: no "corrige" terminología que no entiende.</li>
+
+            <li><strong>Procesa las fotos.</strong> Las imágenes se normalizan y se preparan para ser embebidas en un documento con formato de auditoría.</li>
+
+            <li><strong>Genera el informe.</strong> Un asistente de inteligencia artificial recibe la transcripción completa y las fotos, y arma un documento Word con la estructura que el equipo necesita: secciones por día, descripción técnica de los trabajos, fotos con referencia, y marcas explícitas donde falta información. No inventa datos. Si algo no se mencionó, lo señala.</li>
+          </ol>
+
+          <p><strong>El resultado es un borrador de informe semanal generado en minutos, no en horas.</strong> El ingeniero lo abre, ajusta lo que haga falta, y firma. En vez de redactar desde cero con la cabeza cansada del viernes, revisa un documento que ya tiene la estructura, las fotos en su lugar y el lenguaje técnico correcto.</p>
+
+          <figure>
+            <img src="diagrama-despues.svg" alt="Diagrama: el ingeniero manda audios y fotos por WhatsApp durante la semana, exporta el chat, y un asistente genera el informe formateado." width="800" height="400">
+          </figure>
+
+          <h2>Lo que cambió</h2>
+
+          <p>Antes, el informe semanal era una tarea que nadie quería hacer. Empezaba tarde, terminaba a las apuradas, y a veces quedaba incompleto porque nadie se acordaba de un detalle del miércoles. Ahora la información se captura en el momento, cuando el ingeniero está parado frente a lo que está describiendo.</p>
+
+          <p>El cambio no es solo de velocidad. <strong>Los informes son más completos porque las notas se toman en caliente, no se reconstruyen en frío.</strong> Un audio grabado al lado de la excavación tiene detalles que el mismo ingeniero no recordaría tres días después.</p>
+
+          <p>Y hay un efecto que no anticipamos: el equipo empezó a mandar más notas. Cuando documentar no cuesta esfuerzo, se documenta más. Fotos que antes no se sacaban porque "después la describo de memoria" ahora quedan registradas con contexto.</p>
+
+          <h2>Dónde aplica el mismo patrón</h2>
+
+          <p>El patrón es: un profesional en campo tiene la información pero no el tiempo ni el formato para documentarla. Un asistente toma la captura cruda y la convierte en documento formal. El profesional revisa en vez de redactar.</p>
+
+          <ul class="use-cases">
+            <li><strong>Inspecciones de seguridad e higiene.</strong> Un responsable de seguridad recorre una planta, graba observaciones y saca fotos de las condiciones encontradas. Un asistente arma el acta con las no conformidades detectadas, las fotos como evidencia y las referencias normativas correspondientes. El responsable revisa y completa en vez de redactar el acta desde cero.</li>
+            <li><strong>Relevamientos topográficos.</strong> Un topógrafo en el terreno toma mediciones, saca fotos de los puntos relevados y dicta observaciones sobre el estado del terreno. Un asistente consolida los datos en el formato que requiere el informe técnico. El topógrafo verifica los números en vez de armar la planilla.</li>
+            <li><strong>Pericias y tasaciones.</strong> Un perito visita una propiedad, registra el estado de cada ambiente con fotos y notas de voz. Un asistente organiza las observaciones por ambiente, inserta las fotos y genera el borrador del informe pericial. El perito ajusta las conclusiones en vez de transcribir las observaciones.</li>
+            <li><strong>Seguimiento de mantenimiento industrial.</strong> Un técnico recorre una planta haciendo mantenimiento preventivo. En cada equipo, anota el estado, las mediciones, y si hay algo fuera de rango. Un asistente compila la ronda en el formulario estándar de la empresa, señalando los ítems que requieren atención. El técnico valida y escala, en vez de llenar planillas a mano.</li>
+            <li><strong>Certificaciones de avance.</strong> Un director de obra certifica el avance mensual de cada contratista. Camina la obra, mide, saca fotos, compara contra el plan. Un asistente cruza las notas de campo contra el cronograma y arma la planilla de certificación con los porcentajes de avance y las diferencias detectadas. El director revisa los números en vez de armar la certificación desde una hoja en blanco.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          <img src="../../logo.png" alt="" class="footer-logo">
+          <strong>RailsPilot</strong> — Tu equipo tiene la experiencia, la IA la multiplica
+        </p>
+        <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length === 0) return;
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      });
+    </script>
+  </body>
+</html>
