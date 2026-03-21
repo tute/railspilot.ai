@@ -21,10 +21,10 @@
   <!-- Title -->
   <text x="400" y="32" text-anchor="middle" class="title" font-size="16">Hoy: el informe se arma de memoria el viernes</text>
 
-  <!-- Monday-Thursday: field visits -->
+  <!-- All week: field visits -->
   <rect x="40" y="60" width="200" height="120" class="box day-box"/>
   <text x="140" y="85" text-anchor="middle" class="icon-text">👷</text>
-  <text x="140" y="108" text-anchor="middle" class="title">Lunes a jueves</text>
+  <text x="140" y="108" text-anchor="middle" class="title">Lunes a viernes</text>
   <text x="140" y="126" text-anchor="middle" class="label">Recorridas de obra</text>
   <text x="140" y="145" text-anchor="middle" class="sublabel">Fotos en el carrete</text>
   <text x="140" y="162" text-anchor="middle" class="sublabel">Notas mentales</text>
@@ -46,7 +46,7 @@
   <!-- Friday -->
   <rect x="560" y="60" width="200" height="120" class="box friday-box"/>
   <text x="660" y="85" text-anchor="middle" class="icon-text">😓</text>
-  <text x="660" y="108" text-anchor="middle" class="title">Viernes a la tarde</text>
+  <text x="660" y="108" text-anchor="middle" class="title">Viernes después de obra</text>
   <text x="660" y="126" text-anchor="middle" class="label">Redactar de memoria</text>
   <text x="660" y="145" text-anchor="middle" class="sublabel">Buscar fotos, ordenar,</text>
   <text x="660" y="162" text-anchor="middle" class="sublabel">darle formato</text>
