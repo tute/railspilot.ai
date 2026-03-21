@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <style>
+    text { font-family: 'Nunito', 'Segoe UI', sans-serif; }
+    .title { font-size: 14px; font-weight: 700; fill: #1a1a2e; }
+    .label { font-size: 12px; font-weight: 600; fill: #555; }
+    .sublabel { font-size: 11px; fill: #888; }
+    .icon-text { font-size: 22px; }
+    .arrow { stroke: #ccc; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .box { rx: 12; ry: 12; stroke-width: 2; }
+    .day-box { fill: #f0f4ff; stroke: #b8c9e8; }
+    .lost-box { fill: #fff5f5; stroke: #e8b8b8; }
+    .friday-box { fill: #fff8ed; stroke: #e8d5a8; }
+    .result-box { fill: #fff0f0; stroke: #d9a8a8; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ccc"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" class="title" font-size="16">Hoy: el informe se arma de memoria el viernes</text>
+
+  <!-- All week: field visits -->
+  <rect x="40" y="60" width="200" height="120" class="box day-box"/>
+  <text x="140" y="85" text-anchor="middle" class="icon-text">👷</text>
+  <text x="140" y="108" text-anchor="middle" class="title">Lunes a viernes</text>
+  <text x="140" y="126" text-anchor="middle" class="label">Recorridas de obra</text>
+  <text x="140" y="145" text-anchor="middle" class="sublabel">Fotos en el carrete</text>
+  <text x="140" y="162" text-anchor="middle" class="sublabel">Notas mentales</text>
+
+  <!-- Arrow -->
+  <line x1="250" y1="120" x2="295" y2="120" class="arrow"/>
+
+  <!-- Info lost -->
+  <rect x="305" y="60" width="190" height="120" class="box lost-box"/>
+  <text x="400" y="85" text-anchor="middle" class="icon-text">🧠💨</text>
+  <text x="400" y="108" text-anchor="middle" class="title">Pasan los días</text>
+  <text x="400" y="126" text-anchor="middle" class="label">Detalles se pierden</text>
+  <text x="400" y="145" text-anchor="middle" class="sublabel">"¿Eso fue el martes</text>
+  <text x="400" y="162" text-anchor="middle" class="sublabel">o el miércoles?"</text>
+
+  <!-- Arrow -->
+  <line x1="505" y1="120" x2="550" y2="120" class="arrow"/>
+
+  <!-- Friday -->
+  <rect x="560" y="60" width="200" height="120" class="box friday-box"/>
+  <text x="660" y="85" text-anchor="middle" class="icon-text">😓</text>
+  <text x="660" y="108" text-anchor="middle" class="title">Viernes después de obra</text>
+  <text x="660" y="126" text-anchor="middle" class="label">Redactar de memoria</text>
+  <text x="660" y="145" text-anchor="middle" class="sublabel">Buscar fotos, ordenar,</text>
+  <text x="660" y="162" text-anchor="middle" class="sublabel">darle formato</text>
+
+  <!-- Arrow down from Friday -->
+  <line x1="660" y1="190" x2="660" y2="240" class="arrow"/>
+
+  <!-- Result -->
+  <rect x="480" y="250" width="280" height="110" class="box result-box"/>
+  <text x="620" y="280" text-anchor="middle" class="icon-text">📄</text>
+  <text x="620" y="305" text-anchor="middle" class="title">Informe incompleto</text>
+  <text x="620" y="325" text-anchor="middle" class="sublabel">Fotos sin contexto, detalles faltantes,</text>
+  <text x="620" y="342" text-anchor="middle" class="sublabel">terminado a las apuradas</text>
+
+  <!-- Time label -->
+  <rect x="40" y="280" width="200" height="50" rx="8" ry="8" fill="#ffe0e0" stroke="#d4a0a0" stroke-width="1.5"/>
+  <text x="140" y="303" text-anchor="middle" class="title" fill="#b44">⏱ 2–3 horas</text>
+  <text x="140" y="320" text-anchor="middle" class="sublabel">de redacción manual</text>
+</svg>
