@@ -19,52 +19,40 @@
   </defs>
 
   <!-- Title -->
-  <text x="400" y="32" text-anchor="middle" class="title" font-size="16">Después: registrar en el momento, generar al final</text>
+  <text x="400" y="32" text-anchor="middle" class="title" font-size="16">Después: registrar en el momento, dictar a agente de IA</text>
 
   <!-- During the week: capture -->
-  <rect x="40" y="60" width="200" height="130" class="box capture-box"/>
-  <text x="140" y="85" text-anchor="middle" class="icon-text">👷🎤📸</text>
-  <text x="140" y="110" text-anchor="middle" class="title">Durante la semana</text>
-  <text x="140" y="128" text-anchor="middle" class="label">En obra, al WhatsApp:</text>
-  <text x="140" y="147" text-anchor="middle" class="sublabel">Notas de voz</text>
-  <text x="140" y="164" text-anchor="middle" class="sublabel">Fotos con contexto</text>
-  <text x="140" y="181" text-anchor="middle" class="sublabel">20 segundos cada una</text>
+  <rect x="140" y="60" width="200" height="130" class="box capture-box"/>
+  <text x="240" y="85" text-anchor="middle" class="icon-text">👷🎤📸</text>
+  <text x="240" y="110" text-anchor="middle" class="title">Durante la semana</text>
+  <text x="240" y="128" text-anchor="middle" class="label">Dicta a agente en WhatsApp</text>
+  <text x="240" y="147" text-anchor="middle" class="sublabel">Notas de voz</text>
+  <text x="240" y="164" text-anchor="middle" class="sublabel">Fotos</text>
+  <text x="240" y="181" text-anchor="middle" class="sublabel">Textos</text>
 
   <!-- Arrow -->
-  <line x1="250" y1="125" x2="295" y2="125" class="arrow"/>
-
-  <!-- Export -->
-  <rect x="305" y="70" width="170" height="110" class="box export-box"/>
-  <text x="390" y="95" text-anchor="middle" class="icon-text">📤</text>
-  <text x="390" y="118" text-anchor="middle" class="title">Exportar chat</text>
-  <text x="390" y="136" text-anchor="middle" class="label">Un tap en WhatsApp</text>
-  <text x="390" y="155" text-anchor="middle" class="sublabel">Genera un .zip con</text>
-  <text x="390" y="170" text-anchor="middle" class="sublabel">audios, fotos y texto</text>
-
-  <!-- Arrow -->
-  <line x1="485" y1="125" x2="530" y2="125" class="arrow"/>
+  <line x1="350" y1="125" x2="430" y2="125" class="arrow"/>
 
   <!-- AI Processing -->
-  <rect x="540" y="60" width="220" height="130" class="box process-box"/>
-  <text x="650" y="85" text-anchor="middle" class="icon-text">🤖</text>
-  <text x="650" y="110" text-anchor="middle" class="title">Asistente genera informe</text>
-  <text x="650" y="130" text-anchor="middle" class="sublabel">1. Transcribe audios</text>
-  <text x="650" y="147" text-anchor="middle" class="sublabel">2. Procesa fotos</text>
-  <text x="650" y="164" text-anchor="middle" class="sublabel">3. Arma documento Word</text>
-  <text x="650" y="181" text-anchor="middle" class="sublabel">con formato de auditoría</text>
+  <rect x="440" y="60" width="220" height="130" class="box process-box"/>
+  <text x="550" y="85" text-anchor="middle" class="icon-text">🤖</text>
+  <text x="550" y="110" text-anchor="middle" class="title">Asistente recopila</text>
+  <text x="550" y="130" text-anchor="middle" class="sublabel">Transcribe audios</text>
+  <text x="550" y="147" text-anchor="middle" class="sublabel">Procesa fotos</text>
+  <text x="550" y="164" text-anchor="middle" class="sublabel">Redacta documento</text>
 
   <!-- Arrow down -->
-  <line x1="650" y1="200" x2="650" y2="240" class="arrow"/>
+  <line x1="550" y1="200" x2="550" y2="240" class="arrow"/>
 
   <!-- Result -->
-  <rect x="460" y="250" width="300" height="110" class="box result-box"/>
-  <text x="610" y="278" text-anchor="middle" class="icon-text">✅📄</text>
-  <text x="610" y="303" text-anchor="middle" class="title">Informe completo</text>
-  <text x="610" y="323" text-anchor="middle" class="sublabel">Secciones por día, fotos embebidas,</text>
-  <text x="610" y="340" text-anchor="middle" class="sublabel">terminología técnica. El ingeniero revisa y firma.</text>
+  <rect x="400" y="250" width="300" height="110" class="box result-box"/>
+  <text x="550" y="278" text-anchor="middle" class="icon-text">✅📄</text>
+  <text x="550" y="303" text-anchor="middle" class="title">Informe completo</text>
+  <text x="550" y="323" text-anchor="middle" class="sublabel">Secciones por día, fotos embebidas,</text>
+  <text x="550" y="340" text-anchor="middle" class="sublabel">terminología técnica. El ingeniero revisa y firma.</text>
 
   <!-- Time label -->
-  <rect x="40" y="280" width="200" height="50" rx="8" ry="8" fill="#e0ffe8" stroke="#80d4a0" stroke-width="1.5"/>
-  <text x="140" y="303" text-anchor="middle" class="title" fill="#2a7">⏱ Minutos</text>
-  <text x="140" y="320" text-anchor="middle" class="sublabel">de revisión, no de redacción</text>
+  <rect x="80" y="280" width="200" height="50" rx="8" ry="8" fill="#e0ffe8" stroke="#80d4a0" stroke-width="1.5"/>
+  <text x="180" y="303" text-anchor="middle" class="title" fill="#2a7">⏱ Minutos</text>
+  <text x="180" y="320" text-anchor="middle" class="sublabel">de revisión, no de redacción</text>
 </svg>

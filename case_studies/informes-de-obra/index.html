@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informes de obra dictados desde el teléfono — RailsPilot</title>
+    <title>Informes de obra dictados a un agente — RailsPilot</title>
     <meta name="description" content="Un equipo de ingeniería dicta notas de voz y saca fotos en obra. Un asistente arma el informe semanal con formato, fotos embebidas y terminología técnica. El ingeniero revisa y firma.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,50 +15,52 @@
     <header class="case-header">
       <div class="container">
         <a href="../index.html">← RailsPilot</a>
-        <h1>Informes de obra dictados desde el teléfono</h1>
+        <h1>Informes de obra dictados a un agente</h1>
       </div>
     </header>
 
     <div class="article-wrap">
       <div class="container">
         <article class="article">
-          <p class="lead">Un equipo de ingeniería visita obras en construcción todos los días. Recorren, observan, toman decisiones en el momento. El viernes también recorren obra, y cuando terminan tienen que sentarse a redactar el informe semanal de avance. Después de cinco días en la calle, reconstruir de memoria qué pasó el martes a las diez de la mañana no es fácil. Hacerlo con precisión técnica y formato de auditoría, menos.</p>
+          <p class="lead">Un ingeniero visita obras en construcción todos los días. Recorre, observa y documenta.
+            El viernes, al final del día y de la semana, se senta a redactar el informe semanal de avance.
+            Ordena fotos, agrega epígrafes, reconstruye lo que fue pasando para redactar lo más relevante, busca el papel con anotaciones que quedó en la camioneta.
+            Debe recordar dotaciones, medidas, desviaciones, clima, y todo lo que requirea una futura auditoría de obra.</p>
 
-          <p>Los informes de avance de obra no son opcionales. Son documentos que registran qué se hizo, qué se midió, qué se desvió del plan. Los lee el comitente, los revisa el director de obra, quedan como respaldo ante reclamos. Un informe mal hecho no es solo un trámite incompleto: es un riesgo.</p>
-
-          <p>El problema no es que el equipo no sepa qué escribir. <strong>El problema es que la información está en la cabeza de quien recorrió la obra, y sacarla de ahí lleva tiempo que compite con todo lo demás.</strong> Fotos sueltas en el carrete, notas mentales que se desdibujan, mediciones anotadas en un papel que quedó en la camioneta.</p>
+          <p>El problema no es que el ingeniero no sepa cómo o qué escribir.
+            <strong>El problema es que puede olvidar cosas ese viernes a la tarde, lleva tiempo, y ese tiempo compite con tareas urgentes en el corto plazo.</strong>
+            </p>
 
           <figure>
             <img src="diagrama-antes.svg" alt="Diagrama: hoy el ingeniero recorre la obra, acumula notas mentales, y el viernes reconstruye todo de memoria en un documento Word." width="800" height="400">
           </figure>
 
-          <h2>La solución: registrar en el momento, redactar después</h2>
+          <h2>La solución: dictar a un agente</h2>
 
-          <p>La idea fue simple. El equipo ya usaba WhatsApp en obra para coordinarse. Les pedimos que, además, mandaran notas de voz y fotos a un chat dedicado mientras recorrían. No un informe dictado, no algo formal: lo que les saliera en el momento. "Terminamos el hormigonado del eje 15, quedó bien el nivel." Una foto del encofrado. Un audio de cuarenta segundos sobre un desvío en la armadura.</p>
+          <p>El ingeniero usa WhatsApp para comunicarse con el equipo.
+            Creamos un agente que se integra a su herramienta de trabajo.
+            En conversación con su agente, envía fotos, audios, textos, comentarios.
+            No necesita ser formal o particularmente ordenado: el agente se encarga de compilar un informe siguiendo sus instrucciones.</p>
 
-          <p>Al final de la semana, exportan el chat de WhatsApp (una función que ya tiene la app) y lo suben a un sistema que armamos. El sistema hace tres cosas:</p>
+          <p>Al final de la semana, el agente compila el documento, y notifica al ingeniero si hay secciones faltantes para completar.
+            El ingeniero revisa, corrige, y almacena para futura referencia, ahorrando esfuerzo automatizable hacia el fin de la semana.</p>
+
+          <p>El agente: </p>
 
           <ol>
-            <li><strong>Transcribe los audios.</strong> Cada nota de voz se convierte a texto. El equipo habla en lenguaje técnico de obra y el transcriptor lo respeta: no "corrige" terminología que no entiende.</li>
+            <li><strong>Transcribe audios.</strong> El equipo habla en lenguaje técnico de obra, el transcriptor formaliza sin cambiar terminología de campo.</li>
 
-            <li><strong>Procesa las fotos.</strong> Las imágenes se normalizan y se preparan para ser embebidas en un documento con formato de auditoría.</li>
+            <li><strong>Procesa fotos.</strong> Las imágenes se agregan en el día y horario indicado, con descripción pertinente.</li>
 
-            <li><strong>Genera el informe.</strong> Un asistente de inteligencia artificial recibe la transcripción completa y las fotos, y arma un documento Word con la estructura que el equipo necesita: secciones por día, descripción técnica de los trabajos, fotos con referencia, y marcas explícitas donde falta información. No inventa datos. Si algo no se mencionó, lo señala.</li>
+            <li><strong>Redacta el informe.</strong> Arma el documento Word con la estructura que el equipo necesita: secciones por día, descripción técnica de trabajos, fotos con referencia, y marcas explícitas donde falta información. No inventa datos: si algo no se mencionó, lo señala.</li>
           </ol>
 
-          <p><strong>El resultado es un borrador de informe semanal generado en minutos, no en horas.</strong> El ingeniero lo abre, ajusta lo que haga falta, y firma. En vez de redactar desde cero con la cabeza cansada del viernes, revisa un documento que ya tiene la estructura, las fotos en su lugar y el lenguaje técnico correcto.</p>
+          <p><strong>El resultado es un borrador de informe semanal generado en minutos, no horas.</strong>
+            El ingeniero lo abre, completa, y firma. En vez de redactar desde cero y recordar días pasados, revisa un documento 80% completado y con el formato correcto.</p>
 
           <figure>
             <img src="diagrama-despues.svg" alt="Diagrama: el ingeniero manda audios y fotos por WhatsApp durante la semana, exporta el chat, y un asistente genera el informe formateado." width="800" height="400">
           </figure>
-
-          <h2>Lo que cambió</h2>
-
-          <p>Antes, el informe semanal era una tarea que nadie quería hacer. Empezaba tarde, terminaba a las apuradas, y a veces quedaba incompleto porque nadie se acordaba de un detalle del miércoles. Ahora la información se captura en el momento, cuando el ingeniero está parado frente a lo que está describiendo.</p>
-
-          <p>El cambio no es solo de velocidad. <strong>Los informes son más completos porque las notas se toman en caliente, no se reconstruyen en frío.</strong> Un audio grabado al lado de la excavación tiene detalles que el mismo ingeniero no recordaría tres días después.</p>
-
-          <p>Y hay un efecto que no anticipamos: el equipo empezó a mandar más notas. Cuando documentar no cuesta esfuerzo, se documenta más. Fotos que antes no se sacaban porque "después la describo de memoria" ahora quedan registradas con contexto.</p>
 
           <h2>Dónde aplica el mismo patrón</h2>
 
