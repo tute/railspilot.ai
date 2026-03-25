@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programadores que esperan menos, producen más — RailsPilot</title>
+    <title>Programadores que esperan menos producen más — RailsPilot</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,28 +14,28 @@
     <header class="case-header">
       <div class="container">
         <a href="../index.html">← RailsPilot</a>
-        <h1>Programadores que esperan menos, producen más</h1>
+        <h1>Programadores que esperan menos producen más</h1>
       </div>
     </header>
 
     <div class="article-wrap">
       <div class="container">
         <article class="article">
-          <p class="lead">Cuando un programador hace un cambio, el sistema lo verifica antes de incorporarlo. Si esa verificación tarda quince minutos, el programador abre Twitter, revisa el mail, pierde el hilo. Cuando vuelve al código, tiene que reconstruir el contexto mental. Eso pasa varias veces al día.</p>
+          <p class="lead">Cuando un programador hace un cambio, el sistema lo verifica antes de incorporarlo. Si esa verificación tarda quince minutos, el programador pasa a otras tareas, revisa emails, pierde el hilo. Si se encontró un error, al volver al código tiene que reconstruir el contexto mental. Esto pasa varias veces al día.</p>
 
-          <p>En un cliente con un sistema monolítico de 9 años y un equipo que fue rotando, las verificaciones tardaban más de dieciséis minutos. Encontramos dos problemas: cada operación interna se estaba registrando en disco innecesariamente, y el servicio de verificación no estaba aprovechando su propio historial (estaba recalculando todo desde cero cada vez).</p>
-
-          <p>Corregimos las dos cosas. <strong>Las verificaciones bajaron de más de dieciséis minutos a menos de diez.</strong> Sigue siendo una espera, pero es la diferencia entre perder el contexto y mantenerlo.</p>
-
-          <p>Con verificaciones de menos de diez minutos, el programador puede correrlas en su propia máquina antes de subir el cambio. Ya no necesita empujar trabajo potencialmente incompleto a un servicio en la nube y esperar a ver qué pasa. La verificación pasa a ser parte del trabajo, no algo que le toca a "otro". Es la diferencia entre terminar una tarea y tirarla por arriba del cubículo esperando que alguien la atrape.</p>
+          <p>En un cliente con un sistema monolítico de 9 años y un equipo que fue rotando, las verificaciones tardaban 16 minutos o más.
+            Encontramos y <strong>corregimos dos problemas principales que llevaban casi la mitad del tiempo</strong>, llevando a verificaciones de 10 minutos como máximo.</p>
 
           <figure>
             <img src="ci_tiempo_verificacion.svg" alt="Tiempo de verificación automática: antes 16 min 25 s, después 9 min 31 s." width="680" height="230">
           </figure>
 
-          <p>En un segundo cliente, un sistema nuevo generado en buena parte con asistentes de inteligencia artificial, descubrimos que solo el 61% del código tenía verificaciones automáticas. El resto era territorio sin mapa: los asistentes podían generar cambios ahí, pero nadie (ni humano ni máquina) se enteraba si algo se rompía.</p>
+          <p>Para que el tiempo ganado fuera valioso, corregimos además errores que ocurrían aleatoriamente, incrementando la confianza en que un error encontrado sería directamente relevante para el programador.
+            <strong>Con tests más rápidos y confiables, el equipo comenzó a ejecutar verificaciones en sus computadoras en lugar de la nube, acelerando aún más la retroalimentación</strong>.</p>
 
-          <p>Le pedimos a un asistente que agregara verificaciones archivo por archivo, priorizando los más importantes. <strong>En menos de media hora, la cobertura subió del 61% al 92%.</strong> También incorporamos revisiones de estilo automáticas para que el programador no tuviera que hacer ajustes cosméticos después.</p>
+          <p>En otro caso, un cliente tenía un sistema nuevo generado en buena parte con IA. Descubrimos que solo el 61% del código tenía verificación automática. El resto era territorio sin mapa: los agentes podían hacer cambios, pero ni humanos ni máquinas podían saber fácilmente si eran correctos.</p>
+
+          <p>Le pedimos a un agente que agregara verificaciones, archivo por archivo, priorizando los más importantes. <strong>Incrementamos la cobertura al 92%.</strong> También incorporamos revisiones de estilo automáticas para que el programador no tuviera que hacer ajustes cosméticos después de los agentes.</p>
 
           <figure>
             <img src="ci_cobertura_verificacion.svg" alt="Porcentaje del sistema verificado: antes 61%, después 92%." width="680" height="286">
@@ -43,23 +43,10 @@
 
           <h2>El ciclo virtuoso</h2>
 
-          <p>Acá hay algo que no es obvio: mejorar las verificaciones automáticas no solo ayuda a los programadores. <strong>Ayuda a los propios asistentes.</strong> Un asistente que genera código y puede verificar al instante si funciona, corrige solo. Uno que tiene que esperar quince minutos (o que no tiene verificaciones), entrega trabajo a medias y le pasa el problema al humano.</p>
+          <p>Estos <strong>ciclos de verificación automática ayudaron a programadores, pero también a la IA.</strong> Un agente que genera código y puede verificar que funcione, corrige solo y sabe cuándo terminó. Uno que tiene que esperar quince minutos (o que no tiene verificaciones), entrega trabajo a medias y le pasa el problema al humano.</p>
 
-          <p>Verificaciones más rápidas y más completas hacen que los asistentes sean más efectivos, lo que a su vez permite mejorar más verificaciones. El equipo se mueve más rápido sin sacrificar calidad.</p>
-
-          <h2>El mismo enfoque, en otros rubros</h2>
-
-          <p>Lo que hicimos con verificaciones de código no es exclusivo de equipos de programación. El patrón se repite: hay un proceso repetitivo, propenso a errores, que frena a la persona que debería estar tomando decisiones. Un asistente se encarga de la parte mecánica, un humano revisa el resultado.</p>
-
-          <ul class="use-cases">
-            <li><strong>Informes de obra.</strong> Un director de obra saca fotos y dicta notas desde el teléfono. Un asistente arma el informe con formato, lo cruza contra el cronograma, y lo marca donde hay desvíos. El director revisa y firma en vez de redactar.</li>
-            <li><strong>Cotejación de presupuestos.</strong> Tres proveedores mandan presupuestos en formatos distintos (PDF, mail, planilla). Un asistente los normaliza, arma un comparativo línea por línea, y señala dónde hay diferencias significativas. El decisor compara en vez de transcribir.</li>
-            <li><strong>Auditoría de documentación regulatoria.</strong> Una empresa tiene 200 procedimientos internos que deben cumplir una norma. Un asistente los cruza contra los requisitos y marca qué documentos están desactualizados o incompletos. El responsable de calidad prioriza en vez de releer todo.</li>
-            <li><strong>Traducción técnica con revisión.</strong> Manuales de operación, fichas de seguridad, instrucciones de montaje. Un asistente traduce y un revisor humano ajusta terminología específica del rubro. El volumen sube sin que baje la precisión.</li>
-            <li><strong>Resumen ejecutivo de reuniones.</strong> Tres socios charlan durante una cena y toman decisiones. La grabación se transcribe, un asistente extrae los acuerdos, los pendientes y quién se comprometió a qué. A la mañana siguiente, los tres tienen el mismo resumen.</li>
-          </ul>
-        </article>
-      </div>
+          <p>Verificaciones más rápidas y más completas hacen que los agentes sean más efectivos, generando un círculo virtuoso. <strong>El equipo se mueve más rápido, sin sacrificar calidad</strong>.</p>
+        </div>
     </div>
 
     <footer>
@@ -71,18 +58,5 @@
         <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const reveals = document.querySelectorAll('.reveal');
-        if (reveals.length === 0) return;
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        reveals.forEach(function(el) { observer.observe(el); });
-      });
-    </script>
   </body>
 </html>
