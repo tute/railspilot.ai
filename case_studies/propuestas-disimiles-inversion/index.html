@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la sobremesa al cuadro comparativo — RailsPilot</title>
+    <meta name="description" content="Tres socios comparan cuatro inversiones inmobiliarias distintas. Un agente ordena datos reales, verifica normativa y rentas, y arma un tablero comparativo para decidir en días, no semanas de idas y vueltas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  </head>
+  <body class="case-study">
+    <header class="case-header">
+      <div class="container">
+        <a href="../index.html">← RailsPilot</a>
+        <h1>De la sobremesa al cuadro comparativo</h1>
+      </div>
+    </header>
+
+    <div class="article-wrap">
+      <div class="container">
+        <article class="article">
+          <p class="lead">Tres socios tienen una inversión inmobiliaria en marcha: una casa y un local comercial que compraron a USD 72.000, pusieron a alquilar con un mes de obra liviana, y a los 19 meses operan con un <strong>retorno anualizado cercano al 29%</strong>. Quieren repetir el éxito con una segunda inversión, pero las opciones sobre la mesa no se parecen entre sí.</p>
+
+          <p>En una cena surgieron cuatro alternativas: un galpón para construir desde cero en un terreno de 500m², una casa grande con departamento al fondo que el dueño no logró vender, un terreno barato de alguien que emigra con apuro, y la opción de no hacer nada y seguir acumulando con lo que ya funciona. Cada negocio tiene distinto monto, distinto riesgo, distinto plazo. Compararlos de memoria, entre medialunas y vino, no alcanza.</p>
+
+          <h2>Qué hicimos</h2>
+
+          <figure>
+            <img src="diagrama-flujo-proceso.svg" alt="Diagrama: de la conversación informal con estimaciones vagas al cuadro comparativo con datos verificados." width="900" height="340">
+          </figure>
+
+          <p>Nadie llegó a la cena pensando "después pasamos esto por Claude". Pero al día siguiente, uno de los socios empezó a compartir lo conversado para darle un poco de orden. Lo que arrancó como "organizame estas notas" se convirtió en algo bastante más útil.</p>
+
+          <p><strong>Primero, los datos duros.</strong> El agente procesó la planilla real de la propiedad existente: más de 80 movimientos desde mediados de 2024 (alquileres cobrados, gastos, reparaciones, distribuciones entre socios). Categorizó cada línea y calculó métricas concretas: rendimiento bruto y neto, tasa de retorno, tiempo de recupero. Hubo correcciones: un gasto de USD 2.357 clasificado como parte de la compra resultó ser un estudio de prefactibilidad. Eso solo cambió la base de inversión de USD 74.400 a USD 72.000 y movió todos los indicadores.</p>
+
+          <p><strong>Después, las opciones nuevas.</strong> Cada alternativa se cargó con sus variables: superficie, costo de construcción por metro cuadrado, renta estimada, precio de compra. Para el galpón, el agente verificó los costos de referencia del Consejo Profesional de Agrimensores e Ingenieros y analizó la normativa urbana de la zona. Ahí apareció una restricción que ninguno tenía en la cabeza: <strong>el código urbano limitaba la construcción en planta baja a 300m², no los 500m² que se habían asumido</strong>. Se podía construir un segundo piso, pero eso cambiaba radicalmente el costo y el tipo de inquilino.</p>
+
+          <p><strong>Lo que no se esperaba.</strong> Cuando los socios trajeron una renta estimada de 2,5 millones de pesos por mes (dato de otros inversores en galpones), el agente advirtió que las personas que ya invirtieron tienen incentivo a ser optimistas sobre su propio mercado. Sugirió verificar con inmobiliarias, no solo con inversores. El número bajó a 2,2 millones, y esa diferencia movió la rentabilidad proyectada de forma visible.</p>
+
+          <p>Con todo cargado, Claude armó un tablero interactivo: comparativa lado a lado de las cuatro opciones, simulador con controles para ajustar cada variable en tiempo real, proyección a 10 años, y una lista de preguntas pendientes por negocio. <strong>Todo el proceso: una noche de sobremesa y una o dos horas de chat al día siguiente.</strong></p>
+
+          <h2>Lo que no es obvio</h2>
+
+          <p>Lo más valioso no fue el tablero ni los números. Fue tener un interlocutor que obligara a ser preciso.</p>
+
+          <p><strong>Cuando una estimación pasa de "por lo menos dos millones" a "2,2 millones verificados con dos fuentes", la conversación entre socios cambia.</strong> Ya no se discute desde la intuición de cada uno, sino desde un modelo compartido donde cada supuesto está explícito y se puede cuestionar. El que más sabe de construcción ajusta los costos. El que conoce la zona corrige las rentas. El que mira los números ve qué variable mueve más la aguja.</p>
+
+          <p>El tablero fue software personal y efímero: cumplió su función durante la discusión y no necesita mantenimiento. <strong>El valor no estaba en la herramienta sino en el proceso de construirla</strong>, porque construirla obligó a definir qué se sabía, qué se suponía, y qué faltaba averiguar.</p>
+
+          <p>La decisión salió esa misma semana. Descartaron el galpón (demasiada obra e inversión para el retorno incremental), descartaron el terreno solo (rentabilidad poco clara), y fueron por una casa con departamento al fondo: una estructura parecida a la que ya les funciona.</p>
+
+          <h2>El mismo patrón, fuera de inmuebles</h2>
+
+          <figure>
+            <img src="diagrama-comparativa-inversiones.svg" alt="Diagrama: cuatro opciones de inversión comparadas en inversión estimada, renta mensual y rentabilidad anualizada." width="900" height="420">
+          </figure>
+
+          <ul class="use-cases">
+            <li><strong>Socios de un consultorio médico</strong> evaluando si expandirse a un segundo local, sumar un especialista, o comprar equipamiento. Cada opción tiene distinto costo, distinto riesgo, y distinto plazo de retorno. Un agente estructura la comparación y obliga a explicitar los supuestos de cada socio.</li>
+            <li><strong>Familia decidiendo entre refaccionar o comprar.</strong> Los números que cada uno tiene en la cabeza nunca coinciden. Un agente procesa presupuestos reales, los pone lado a lado, y marca qué falta cotizar antes de decidir.</li>
+            <li><strong>Productores agropecuarios</strong> eligiendo entre cultivos o inversiones para la próxima campaña. Cada opción depende de variables diferentes (clima, precio internacional, costo de insumos). Un agente arma escenarios y muestra qué pasa si cambia cada una.</li>
+            <li><strong>Socios de un bar</strong> evaluando si abrir una segunda sucursal, ampliar el actual, o invertir la ganancia en otra cosa. La charla de siempre, pero con números que todos pueden ver y cuestionar.</li>
+          </ul>
+
+          <p><em>Tute Costa es Staff Software Engineer con más de diez años en desarrollo. Trabaja en <a href="https://www.tutecosta.com/">tutecosta.com</a> y publica en <a href="https://withatwist.dev/">withatwist.dev</a>. <a href="https://www.railspilot.ai/">RailsPilot.ai</a> es su servicio de desarrollo aumentado con IA.</em></p>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          <img src="../../logo.png" alt="" class="footer-logo">
+          <strong>RailsPilot</strong> — Tu equipo tiene la experiencia, la IA la multiplica
+        </p>
+        <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length === 0) return;
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      });
+    </script>
+  </body>
+</html>

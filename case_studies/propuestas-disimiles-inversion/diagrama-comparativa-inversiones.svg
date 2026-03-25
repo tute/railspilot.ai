@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="420" fill="#fafafa" rx="8"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-size="15" font-weight="600" fill="#1a1a1a">Cuatro opciones, lado a lado</text>
+
+  <!-- Section 1: Inversión requerida (USD) -->
+  <text x="50" y="68" font-size="12" font-weight="600" fill="#555">Inversión estimada (USD)</text>
+
+  <!-- Labels column -->
+  <text x="50" y="100" font-size="11" fill="#333">Casa + local (existente)</text>
+  <text x="50" y="136" font-size="11" fill="#333">Galpón (construir)</text>
+  <text x="50" y="172" font-size="11" fill="#333">Casa + depto al fondo</text>
+  <text x="50" y="208" font-size="11" fill="#333">Terreno (reventa)</text>
+
+  <!-- Bars: Investment - scale: 0 to 200k, bar area 250-750 = 500px for 200k, so 2.5px per 1k -->
+  <!-- Casa+local: 72k = 180px -->
+  <rect x="250" y="86" width="180" height="20" rx="3" fill="#1976d2"/>
+  <text x="436" y="101" font-size="10" font-weight="600" fill="#1976d2">USD 72.000</text>
+
+  <!-- Galpón: ~150k (midpoint estimate) = 375px, show range -->
+  <rect x="250" y="122" width="300" height="20" rx="3" fill="#ff9800" opacity="0.3"/>
+  <rect x="250" y="122" width="375" height="20" rx="3" fill="#ff9800" opacity="0.3"/>
+  <rect x="250" y="122" width="300" height="20" rx="3" fill="#ff9800"/>
+  <text x="632" y="137" font-size="10" font-weight="600" fill="#e65100">USD 120.000 - 200.000</text>
+  <!-- Range indicator -->
+  <rect x="250" y="122" width="375" height="20" rx="3" fill="none" stroke="#ff9800" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Casa+depto: 80k = 200px -->
+  <rect x="250" y="158" width="200" height="20" rx="3" fill="#7b1fa2"/>
+  <text x="456" y="173" font-size="10" font-weight="600" fill="#7b1fa2">USD 80.000</text>
+
+  <!-- Terreno: 8k = 20px -->
+  <rect x="250" y="194" width="20" height="20" rx="3" fill="#388e3c"/>
+  <text x="276" y="209" font-size="10" font-weight="600" fill="#388e3c">USD 8.000</text>
+
+  <!-- Divider -->
+  <line x1="50" y1="235" x2="850" y2="235" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Section 2: Rendimiento proyectado -->
+  <text x="50" y="265" font-size="12" font-weight="600" fill="#555">Rendimiento anual proyectado</text>
+
+  <!-- Labels -->
+  <text x="50" y="297" font-size="11" fill="#333">Casa + local (existente)</text>
+  <text x="50" y="333" font-size="11" fill="#333">Galpón (construir)</text>
+  <text x="50" y="369" font-size="11" fill="#333">Casa + depto al fondo</text>
+  <text x="50" y="405" font-size="11" fill="#333">Terreno (reventa)</text>
+
+  <!-- Bars: Return - scale 0 to 30%, bar area 250-700 = 450px for 30%, so 15px per 1% -->
+  <!-- Casa+local: 10.4% cap rate = 156px (showing cap rate, not total return) -->
+  <rect x="250" y="283" width="156" height="20" rx="3" fill="#1976d2"/>
+  <text x="412" y="298" font-size="10" font-weight="600" fill="#1976d2">10,4%</text>
+  <text x="448" y="298" font-size="9" fill="#888">(operando, dato real)</text>
+
+  <!-- Galpón: 10.8-12.9% = range 162-194 -->
+  <rect x="250" y="319" width="162" height="20" rx="3" fill="#ff9800"/>
+  <rect x="250" y="319" width="194" height="20" rx="3" fill="none" stroke="#ff9800" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="450" y="334" font-size="10" font-weight="600" fill="#e65100">10,8% - 12,9%</text>
+  <text x="540" y="334" font-size="9" fill="#888">(estimado, según terreno)</text>
+
+  <!-- Casa+depto: 5-8% = range 75-120 -->
+  <rect x="250" y="355" width="75" height="20" rx="3" fill="#7b1fa2"/>
+  <rect x="250" y="355" width="120" height="20" rx="3" fill="none" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="376" y="370" font-size="10" font-weight="600" fill="#7b1fa2">5% - 8%</text>
+  <text x="416" y="370" font-size="9" fill="#888">(renta baja, apuesta a revalorización)</text>
+
+  <!-- Terreno: ~30% but different type -->
+  <rect x="250" y="391" width="450" height="20" rx="3" fill="#388e3c" opacity="0.15"/>
+  <rect x="250" y="391" width="450" height="20" rx="3" fill="none" stroke="#388e3c" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="706" y="406" font-size="10" font-weight="600" fill="#388e3c">~30%</text>
+  <text x="736" y="406" font-size="9" fill="#888">(si revenden)</text>
+</svg>
