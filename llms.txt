@@ -1,0 +1,32 @@
+# RailsPilot
+
+> AI-augmented Rails development. Staff Engineer reviewed.
+
+RailsPilot delivers production-ready Ruby on Rails features weekly. An AI coding agent writes the code, and a Staff Engineer with 10+ years of Rails experience reviews every pull request. The service is designed for startups and teams that need to ship fast without the 3-4 month hiring cycle.
+
+## What RailsPilot does
+
+- Delivers 12 staff-level Rails features per month
+- First feature ships within 24 hours of engagement
+- Every PR is reviewed by a Staff Engineer (TDD enforced, ≥90% test coverage)
+- Weekly planning calls to adjust priorities
+- Month-to-month, cancel anytime
+
+## Who it's for
+
+- Teams with a Rails app and a clear backlog (15-50 issues)
+- Technical founders or tech leads who can review PRs
+- Companies that need to ship without hiring
+
+## Pricing
+
+- Monthly: $4,000/mo for 12 features ($350 per additional feature)
+- 2-Week Pilot: $2,500 for 5 tasks (money-back guarantee)
+
+## Links
+
+- Homepage: https://www.railspilot.ai/
+- Case studies (Spanish): https://www.railspilot.ai/case_studies/
+- Schedule a call: https://calendar.app.google/mgPEnSCgCAgNUo5E7
+- Contact: tutecosta@gmail.com
+- Founder: Tute Costa — https://www.tutecosta.com/
