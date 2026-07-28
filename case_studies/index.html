@@ -58,7 +58,7 @@
       </div>
     </header>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">El problema</span>
@@ -75,7 +75,7 @@
 
     <div class="section-divider"><span></span></div>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">Ejemplos</span>
@@ -83,15 +83,15 @@
         </div>
 
         <div class="grid-3">
-          <div class="card reveal">
+          <div class="card">
             <h4>Documentación de campo</h4>
             <p>Informes formateados con terminología técnica, listos para revisión y firma.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Datos de múltiples proveedores</h4>
             <p>Comparativas estructuradas item por item para que el decisor pregunte lo que falta y pueda comparar.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Información dispersa</h4>
             <p>Audios, fotos, notas, planillas chequeadas y consolidadas en documentos listos para revisión.</p>
           </div>
@@ -108,7 +108,7 @@
       </div>
     </section>
 
-    <section class="alt-bg reveal">
+    <section class="alt-bg">
       <div class="container">
         <div class="section-header">
           <span class="section-label">Tu equipo vale más, no menos</span>
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">Errores comunes</span>
@@ -128,15 +128,15 @@
         </div>
 
         <div class="grid-3">
-          <div class="card reveal">
+          <div class="card">
             <h4>Comprar herramientas sin cambiar procesos</h4>
             <p>Las herramientas solas no se adoptan. Capacitamos a tu equipo para que las use y verificamos que les funcione.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Esperar que la IA reemplace criterio profesional</h4>
             <p>No lo hace. Lo potencia. El humano revisa, ajusta y firma.</p>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h4>Nadie a cargo de que la adopción funcione</h4>
             <p>Sin alguien a cargo, el experimento queda en "alguien probó algo y quedó ahí".</p>
           </div>
@@ -145,7 +145,7 @@
     </section>
 
 
-    <section class="reveal">
+    <section>
       <div class="container">
         <div class="section-header">
           <span class="section-label">Casos publicados</span>
@@ -158,19 +158,19 @@
             RailsPilot.ai</a> (en inglés).
         </p>
 
-        <a href="cotejacion-presupuestos/" class="case-link card reveal">
+        <a href="cotejacion-presupuestos/" class="case-link card">
           <h4>Agente cotejador de presupuestos de distintos proveedores</h4>
           <p>Llegan presupuestos en PDFs, mails,  planillas, comentarios. Extraer la información, normalizarla, e intentar llevarlos a una única tabla comparativa es complicado y tedioso. Pusimos un agente a cargo de todo eso, y respuestas para cada que proveedor complete los datos faltantes.</p>
           <span class="case-link-arrow">→</span>
         </a>
 
-        <a href="informes-de-obra/" class="case-link card reveal">
+        <a href="informes-de-obra/" class="case-link card">
           <h4>Informes de obra dictados a un agente</h4>
           <p>Un equipo de ingeniería recorre obras durante la semana y el viernes tiene que redactar el informe de avance de memoria. Ahora mandan audios y fotos por WhatsApp mientras recorren, y un asistente genera el informe con formato, fotos embebidas y terminología técnica. El ingeniero revisa en vez de redactar.</p>
           <span class="case-link-arrow">→</span>
         </a>
 
-        <a href="programadores-que-esperan-menos/" class="case-link card reveal">
+        <a href="programadores-que-esperan-menos/" class="case-link card">
           <h4>Programadores que esperan menos por verificaciones automáticas producen más</h4>
           <p>Tests que corren de la mitad del tiempo, cobertura de código llevada al 92%. Las verificaciones automáticas mejoran el trabajo del programador, y de los agentes de IA también.</p>
           <span class="case-link-arrow">→</span>
@@ -201,18 +201,5 @@
         <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const reveals = document.querySelectorAll('.reveal');
-        if (reveals.length === 0) return;
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-          });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        reveals.forEach(function(el) { observer.observe(el); });
-      });
-    </script>
   </body>
 </html>
