@@ -990,3 +990,23 @@ footer p {
     padding: 32px 24px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero::after {
+    animation: none;
+  }
+
+  .btn,
+  .card,
+  .process-number {
+    transition: none;
+  }
+
+  .btn-ghost:hover,
+  .btn-gold:hover,
+  .card:hover,
+  .process-step:hover .process-number {
+    transform: none;
+  }
+}
