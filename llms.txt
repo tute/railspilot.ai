@@ -20,8 +20,7 @@ RailsPilot delivers production-ready Ruby on Rails features weekly. An AI coding
 
 ## Pricing
 
-- Monthly: $4,000/mo for 12 features ($350 per additional feature)
-- 2-Week Pilot: $2,500 for 5 tasks (money-back guarantee)
+- Monthly: $5,000/mo for 12 features ($500 per additional feature)
 
 ## Links
 

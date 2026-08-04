@@ -10,7 +10,7 @@ RailsPilot offers production-ready Rails features delivered weekly, combining St
 - First feature delivered within 24 hours
 - TDD enforced with ≥90% test coverage
 - Staff Engineer review on every PR
-- Pay-as-you-go pricing at $4,000/month
+- Pay-as-you-go pricing at $5,000/month
 
 ## Technologies
 
@@ -37,4 +37,4 @@ RailsPilot offers production-ready Rails features delivered weekly, combining St
 5. **How It Works** - 5-step process flow
 7. **Who We Are** - Team background
 8. **FAQ** - Common questions
-9. **CTA** - Pilot program and scheduling
+9. **CTA** - Scheduling
