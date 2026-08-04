@@ -12,4 +12,4 @@
 
 ## Contact
 - Schedule a call: https://calendar.app.google/mgPEnSCgCAgNUo5E7
-- Email: tutecosta@gmail.com
+- Email: tute@railspilot.ai

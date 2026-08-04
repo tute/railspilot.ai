@@ -27,5 +27,5 @@ RailsPilot delivers production-ready Ruby on Rails features weekly. An AI coding
 - Homepage: https://www.railspilot.ai/
 - Case studies (Spanish): https://www.railspilot.ai/case_studies/
 - Schedule a call: https://calendar.app.google/mgPEnSCgCAgNUo5E7
-- Contact: tutecosta@gmail.com
+- Contact: tute@railspilot.ai
 - Founder: Tute Costa — https://www.tutecosta.com/
