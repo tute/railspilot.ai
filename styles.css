@@ -729,6 +729,20 @@ table .highlight-row td strong {
   font-size: 0.9em;
 }
 
+.check-list.human li::before {
+  content: '🧑‍💻';
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+}
+
+.check-list.agent li::before {
+  content: '🤖';
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+}
+
 /* About section */
 .about-content {
   max-width: 800px;

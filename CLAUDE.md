@@ -12,9 +12,7 @@ The English landing page (`index.html`) currently focuses on Rails/software deve
 
 ## Structure
 
-- `index.html` + `styles.css` — English landing page (Rails development service)
-- `case_studies/` — Spanish-language case studies and hub page
-  - `case_studies/index.html` — Hub: AI consulting for automation of repetitive work
-  - `case_studies/cotejacion-presupuestos/` — Budget cross-referencing (HR, insurance, legal)
-  - `case_studies/informes-de-obra/` — Construction site reports
-  - `case_studies/programadores-que-esperan-menos/` — CI optimization for developers
+- `index.html` + `styles.css`: English landing page (Rails development service)
+- `case_studies/`: Spanish-language case studies and hub page
+  - `case_studies/index.html`: Hub: AI consulting for automation of repetitive work
+  - `case_studies/**/`: Concrete examples
