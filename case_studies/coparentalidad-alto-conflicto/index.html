@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación entre padres en conflicto, con prueba que el juez acepta — RailsPilot</title>
+    <meta name="description" content="Padres en conflicto que se comunican sin un profesional relatando cada mensaje. Un intermediario que modera el tono, entrega lo neutral y deja un acta con fecha que el estudio descarga firmada.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+  </head>
+  <body class="case-study">
+    <header class="case-header">
+      <div class="container">
+        <a href="../index.html">← RailsPilot</a>
+        <h1>Comunicación entre padres en conflicto, con prueba que el juez acepta</h1>
+      </div>
+    </header>
+
+    <div class="article-wrap">
+      <div class="container">
+        <article class="article">
+          <p class="lead">Dos padres separados que no logran hablar sin agredirse igual tienen que coordinar la vida de sus hijos: quién retira del colegio, cómo se reparten los gastos, qué pasa el fin de semana. Cada mensaje es una chispa. Y todo lo que se dicen puede terminar delante de un juez.</p>
+
+          <h2>El problema</h2>
+
+          <p>La solución habitual era poner a una psicóloga adentro de un grupo de WhatsApp con los dos padres. Ella oficiaba de intermediaria: leía cada mensaje, frenaba las agresiones, reformulaba lo que hacía falta y trataba de que la conversación no escalara. Cuando algo era relevante para la causa, lo transcribía en un informe para el estudio jurídico.</p>
+
+          <p>Ese esquema tiene tres problemas que se arrastran juntos. <strong>Depende de que una persona esté presente</strong> justo cuando llega el mensaje hostil, se acuerde de todo lo que pasó y lo redacte sin sesgo. El informe termina siendo la interpretación de la profesional, no el registro de lo que efectivamente se dijo. Y para llevar la prueba al juzgado, el estudio recurría a capturas de pantalla: recortadas, sin contexto, fáciles de discutir. <strong>Un juez a veces no las acepta como prueba.</strong></p>
+
+          <p>Además está el costo. Tener a un profesional moderando cada intercambio en tiempo real se cobra caro por mes, y buena parte de esas horas se van en la tarea mecánica de leer, relatar y transcribir, no en el criterio clínico o legal que justifica su formación.</p>
+
+          <figure>
+            <img src="diagrama-antes.svg" alt="Diagrama: hoy una psicóloga adentro del grupo de WhatsApp modera y transcribe cada mensaje, el estudio arma capturas de pantalla y el juez a veces no las acepta." width="800" height="540">
+          </figure>
+
+          <h2>Nuestra solución</h2>
+
+          <p>Construimos Coordinador Parental, una aplicación Rails conectada a un número de WhatsApp Business. Los padres no se escriben entre sí: cada uno le escribe al número, y el sistema es el intermediario. Cada mensaje pasa por este circuito:</p>
+
+          <ol>
+            <li><strong>Clasifica el tono.</strong> Un modelo de lenguaje evalúa cada mensaje entrante y decide si es neutral o si va cargado de hostilidad.</li>
+
+            <li><strong>Pide reformular lo hostil.</strong> Si el mensaje agrede, no se entrega. Vuelve al que lo escribió con una reescritura sugerida y opciones: enviar como está, usar la versión propuesta o editarla. La desescalada deja de depender de que alguien esté mirando en ese momento.</li>
+
+            <li><strong>Entrega lo neutral.</strong> Los mensajes que pasan el filtro se relayan al otro padre, con el mismo contenido pero sin la carga que enciende el conflicto.</li>
+
+            <li><strong>Registra todo en un acta.</strong> Cada mensaje, cada reformulación y cada consentimiento queda guardado con fecha y hora. No es una transcripción hecha de memoria: es el registro de lo que realmente pasó.</li>
+          </ol>
+
+          <p>El estudio jurídico entra a un panel web, ve el hilo completo de cada caso y, cuando lo necesita, <strong>descarga un PDF firmado listo para presentar ante el juez</strong>. En lugar de capturas sueltas que se pueden discutir, hay un acta íntegra, ordenada y con fecha. Es la diferencia entre "esto es lo que me acuerdo que pasó" y "esto es lo que pasó, acá está".</p>
+
+          <figure>
+            <img src="diagrama-despues.svg" alt="Diagrama: los padres escriben al número de WhatsApp Business, el sistema clasifica el tono, pide reformular lo hostil, entrega lo neutral y registra todo; el abogado revisa en la web y descarga un PDF firmado que el juez acepta." width="800" height="540">
+          </figure>
+
+          <p>El intermediario no desaparece: cambia de naturaleza. La parte mecánica y agotadora, leer cada mensaje, moderar en el momento y transcribir, la hace el sistema, siempre, sin cansarse ni olvidarse. <strong>El criterio profesional queda para donde hace falta:</strong> el coordinador y el abogado revisan, deciden qué es relevante y firman. Se saca la fricción y el costo de tener a alguien tapando el agujero en tiempo real, y la prueba pasa a ser algo que el juzgado puede aceptar sin objeciones.</p>
+
+          <h2>Dónde aplica el mismo patrón</h2>
+
+          <p>El problema de fondo, comunicación entre partes en conflicto que después hay que probar ante un tercero, aparece en muchos contextos:</p>
+
+          <ul class="use-cases">
+            <li><strong>Cuota alimentaria y régimen de visitas.</strong> Los acuerdos y sus incumplimientos se discuten por mensajes. Un registro con fecha, en vez de capturas, muestra quién propuso qué y quién no respondió.</li>
+            <li><strong>Conflictos de consorcio.</strong> Vecinos y administración cruzan reclamos que a veces terminan en mediación. Un canal moderado deja constancia de los pedidos y las respuestas sin que escale a la agresión personal.</li>
+            <li><strong>Relación laboral tensa.</strong> Intercambios entre un empleado y su empleador antes de un despido. Un acta ordenada vale más que un puñado de screenshots cuando el caso llega a un juzgado laboral.</li>
+            <li><strong>Órdenes de restricción y contacto regulado.</strong> Cuando un juez limita el contacto pero la coparentalidad obliga a coordinar, un canal supervisado permite el mensaje imprescindible y bloquea el resto, dejando registro de todo.</li>
+            <li><strong>Atención al cliente en disputas.</strong> Reclamos que pueden derivar en defensa del consumidor. Moderar el tono de ida y vuelta y guardar el hilo completo protege a las dos partes.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          <img src="../../logo.png" alt="" class="footer-logo">
+          <strong>RailsPilot</strong> — Tu equipo tiene la experiencia, la IA la multiplica
+        </p>
+        <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length === 0) return;
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+      });
+    </script>
+  </body>
+</html>
