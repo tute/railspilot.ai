@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordené una cartera de alquileres en una carpeta, y un agente nos ayuda a administrarla — RailsPilot</title>
+    <meta name="description" content="Cinco propiedades, contratos distintos, índices que no coinciden, y la información repartida entre PDFs escaneados, audios y la memoria de tres personas. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="apple-touch-icon" href="../../logo.png">
+    <link rel="canonical" href="https://www.railspilot.ai/case_studies/cartera-alquileres/">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.railspilot.ai/case_studies/cartera-alquileres/">
+    <meta property="og:title" content="Ordené una cartera de alquileres en una carpeta, y un agente nos ayuda a administrarla — RailsPilot">
+    <meta property="og:description" content="Cinco propiedades, contratos distintos, índices que no coinciden. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <meta property="og:image" content="https://www.railspilot.ai/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ordené una cartera de alquileres en una carpeta, y un agente nos ayuda a administrarla — RailsPilot">
+    <meta name="twitter:description" content="Cinco propiedades, contratos distintos, índices que no coinciden. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <meta name="twitter:image" content="https://www.railspilot.ai/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ordené una cartera de alquileres en una carpeta, y un agente nos ayuda a administrarla",
+      "description": "Cinco propiedades, contratos distintos, índices que no coinciden, y la información repartida entre PDFs escaneados, audios y la memoria de tres personas. Un agente lee la carpeta y responde citando de dónde sale cada dato.",
+      "url": "https://www.railspilot.ai/case_studies/cartera-alquileres/",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Organization",
+        "name": "RailsPilot",
+        "url": "https://www.railspilot.ai"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "RailsPilot",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.railspilot.ai/logo.png"
+        }
+      }
+    }
+    </script>
+  </head>
+  <body class="case-study">
+    <header class="case-header">
+      <div class="container">
+        <a href="../index.html">← RailsPilot</a>
+        <h1>Ordené una cartera de alquileres en una carpeta, y un agente nos ayuda a administrarla</h1>
+      </div>
+    </header>
+
+    <div class="article-wrap">
+      <div class="container">
+        <article class="article">
+          <p class="lead">Un martes la inmobiliaria le escribe a un cliente: "se viene el ajuste del dúplex, ¿aplicamos el índice nuevo o seguimos con la cláusula vieja?". Él sabe de qué propiedad le hablan. Para saber qué índice usa ese contrato, cuándo fue el último ajuste y si la cadencia es trimestral o semestral, tiene que abrir una carpeta de PDF escaneados y buscar algo que firmó hace dos años.</p>
+
+          <p>Ese es el modo de falla real de administrar cinco o seis propiedades cuando no es tu trabajo principal. La información se reparte entre documentos de papel, a veces escaneados, a veces en la escribanía, audios de WhatsApp y la memoria de al menos tres personas distintas. Todos los meses la contadora pregunta al dueño de cuánto es cada alquiler para emitir facturas correctas, y la respuesta llega errada o tarde, y siempre con dudas.</p>
+
+          <p>Armé un agente para actuar de cerebro en esta mini empresa que nunca mereció un empleado. Lo llamo Olmo. Vive sobre una carpeta de inmuebles, cada una con sus escrituras, boletos de compra, contratos de alquiler, recibos, y notas particulares de cada propiedad o inquilino. Sabe leer PDFs, hace cuentas de fechas y de plata, y responde citando de dónde sale cada dato. Entiende también la forma de esta sociedad, y cuánto corresponde a cada socio en cada momento.</p>
+
+          <figure>
+            <img src="diagrama-antes.svg" alt="Diagrama: la información repartida entre la inmobiliaria, el dueño, la contadora, audios de WhatsApp, PDFs escaneados, la escribanía y la memoria de tres personas. Nadie tiene la foto completa." width="800" height="440">
+          </figure>
+
+          <h2>Ajustes: qué índice de precios, y cada cuánto</h2>
+
+          <p>Cada contrato ajusta distinto porque se firman en años distintos: IPC, índice Casa Propia, y los más viejos con un porcentaje mínimo cada seis meses. <strong>La cadencia importa tanto como el índice.</strong> Un ajuste trimestral sobre un índice que se mueve rápido compone muy distinto que uno semestral, y confundirlos es cobrar de menos cuatro meses o sorprender al inquilino con un número que no cuadra.</p>
+
+<pre class="agent-response"><code>&gt; ¿cuándo corresponde el próximo ajuste del dúplex?
+
+Contrato firmado 2023-08-01, ajuste trimestral por índice Casa Propia
+(cláusula 4, duplex-centro/contrato-2023.pdf). Último ajuste aplicado:
+2025-05-01, canon actual $415.000. Próximo ajuste: 2025-08-01,
+faltan 12 días. El dato del índice para ese mes todavía no está
+publicado. Sugiero avisar al inquilino con el mecanismo de cálculo
+y aplicar cuando salga el número oficial.</code></pre>
+
+          <h2>Cómo está armado</h2>
+
+          <p>Primero, que los papeles se puedan leer. El paso cero fue juntar todo en un solo lugar y digitalizarlo: verificar si cada documento tiene texto, y si no lo tiene, pasarlo por reconocimiento óptico, enderezarlo, limpiarlo y comprimirlo.</p>
+
+          <p>La mitad de la carpeta eran fotos de papel guardadas con extensión <code>.pdf</code>: 14 MB, torcidas, sin capa de texto. Un agente con eso inventa o se consume 3 dólares de cómputo solo para entender cuándo se actualiza el alquiler.</p>
+
+<pre><code># ¿tiene capa de texto?
+$ pdftotext -l 1 contrato.pdf - | wc -w
+3
+
+# no tiene. OCR, enderezado, limpieza y compresión en un paso
+$ ocrmypdf --rotate-pages --deskew --clean --optimize 3 \
+    --language spa contrato.pdf contrato.ocr.pdf
+
+$ ls -lh contrato*.pdf
+14M  contrato.pdf
+912K contrato.ocr.pdf</code></pre>
+
+          <p>El mismo contrato queda liviano, derecho y buscable. <strong>La IA es tan buena como su contexto</strong>: ordenar la información es la tarea principal.</p>
+
+          <p>a legibles, los documentos van a una carpeta por propiedad:</p>
+
+<pre><code>propiedades/duplex-centro/
+  contrato-2023.pdf
+  contrato-2025-renovacion.pdf
+  escritura.pdf
+  liquidaciones/
+  recibos/
+    2025-01.pdf
+    2025-02.pdf
+  CLAUDE.md</code></pre>
+
+          <p>Cada carpeta tiene su propio <code>CLAUDE.md</code>, y Olmo lo lee antes que nada, siempre. Ahí viven las notas humanas: "este contrato ajusta 10% cada cuatro meses desde marzo", "el inquilino paga una parte en dólares, ver anexo".</p>
+
+          <p><strong>El límite es lo que lo hace confiable.</strong> Olmo no tiene permiso de escritura, y la única operación de git que corre es <code>git pull --rebase</code>. Si un documento está mal, lo arregla una persona. Sobre la planilla de cuentas escribe celdas de datos, nunca fórmulas: los cálculos de rentabilidad los escribió alguien y quedan intactos.</p>
+
+          <figure>
+            <img src="diagrama-despues.svg" alt="Diagrama: una carpeta ordenada por propiedad con PDFs procesados por OCR y notas humanas en CLAUDE.md. El agente Olmo lee la carpeta y responde preguntas del dueño, el socio y la contadora, citando la fuente de cada dato." width="800" height="440">
+          </figure>
+
+          <h2>Vencimientos con margen para actuar</h2>
+
+<pre class="agent-response"><code>&gt; contratos que vencen en los próximos 60 días
+
+Dos ambientes: vence 2025-09-14 (faltan 47 días).
+Contrato original de 7 páginas, cláusulas poco claras sobre quién
+decide las mejoras. Sugiero renovar con el modelo corto de 2 páginas
+que se usa en las propiedades nuevas, si el inquilino está de acuerdo.
+Borrador de aviso a la administradora en salida/aviso-dos-ambientes.md.</code></pre>
+
+          <p>Un contrato se recuerda 20 días antes de vencer, cuando hacían falta 60 para renegociar o salir a buscar inquilino. Olmo marca todo lo que cae dentro de una ventana de 60 días, y deja escrito el borrador del aviso a la inmobiliaria y el evento de calendario.</p>
+
+          <h2>Cuentas: facturación, pagos y comisiones</h2>
+
+          <p>Olmo ayuda a emitir cada factura para cada inmueble, cada mes. Alquilar con monotributo necesita comprobante, y el techo de la categoría debe respetarse. Olmo mantiene la suma de facturación de los últimos doce meses móviles y avisa cuando el acumulado se acerca al límite.</p>
+
+          <p>Cuando ingresa una transferencia que no coincide con ninguna liquidación esperada:</p>
+
+<pre class="agent-response"><code>&gt; reconciliación de pagos, marzo
+
+Dos ambientes: esperado $380.000, recibido $380.000, OK.
+Dúplex: esperado $415.000, recibido $460.000, diferencia de
++$45.000 sin liquidación asociada. La última liquidación
+es de febrero. Revisar antes de asentar.</code></pre>
+
+          <p>Y está la comisión mensual de la administradora, que según el acuerdo cubre "administración integral". Al listar contra qué se facturó esa comisión durante doce meses aparecieron: reenviar por mail una factura de servicios, y dos meses cobrados sin liquidación que los justifique. Es la deriva normal de un servicio que nadie vuelve a leer, y <strong>se ve cuando alguien mira doce meses de papel de una sentada</strong>.</p>
+
+          <h2>Qué pasa con la rentabilidad</h2>
+
+          <p>El número que importa a fin de año es la rentabilidad neta por propiedad, y cambia mucho según cómo se cuente la comisión del intermediario. En una de las propiedades el alquiler bruto anual dio cerca del 8,5% del valor de compra; descontando comisión, seguro y mantenimiento promedio, bajó a 6,1%. La misma propiedad administrada de forma directa, con los mismos supuestos de mantenimiento, daba alrededor de 7,3%. Ese 1,2% sugiere la pregunta: ¿vale la pena administrar con esta inmobiliaria?</p>
+
+          <p>Todo esto pide disciplina: leer el papelerío todas las veces, y no una sola vez al firmar. <strong>Tedioso para una persona y simple para un agente</strong>.</p>
+        </article>
+      </div>
+    </div>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2>Conversemos</h2>
+        <p class="cta-text">Sin compromiso, sin venta de software.</p>
+        <p class="cta-text">Hablamos de tu operación y vemos si hay algo concreto para automatizar.</p>
+        <p class="cta-text highlight">Tu equipo tiene la experiencia, la IA la multiplica</p>
+
+        <a href="mailto:tute@railspilot.ai" class="btn btn-gold">Escribinos</a>
+        <p class="contact-note" style="margin-top: 32px; color: rgba(255,255,255,0.9);">
+          O <a href="https://calendar.app.google/mgPEnSCgCAgNUo5E7" style="color: var(--secondary); font-weight: 700;">agendá una llamada de 15 minutos</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          <img src="../../logo.png" alt="" class="footer-logo">
+          <strong>RailsPilot</strong> — Tu equipo tiene la experiencia, la IA la multiplica
+        </p>
+        <p class="footer-sub"><a href="../index.html">Volver al inicio</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

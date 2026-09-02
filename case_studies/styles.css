@@ -195,3 +195,35 @@
 .case-study .case-link:hover .case-link-arrow {
   transform: translateY(-50%) translateX(4px);
 }
+
+.case-study .article pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: 12px;
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.case-study .article pre code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: inherit;
+  background: none;
+  padding: 0;
+}
+
+.case-study .article pre.agent-response {
+  background: #f0f4f8;
+  color: var(--text);
+  border-left: 4px solid var(--primary);
+}
+
+.case-study .article code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
