@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFBF5">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1A1826">
-    <title>La pequeña empresa que nunca mereció un empleado — RailsPilot</title>
-    <meta name="description" content="Cinco propiedades, contratos distintos, índices que no coinciden, y la información repartida entre PDFs escaneados, audios y la memoria de tres personas. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <title>Cinco propiedades y demasiadas cosas para recordar — RailsPilot</title>
+    <meta name="description" content="Contratos distintos, ajustes de alquiler, vencimientos y papeles repartidos. Cómo construí un agente para organizar la información de cinco propiedades.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,21 +17,21 @@
 
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.railspilot.ai/case_studies/cartera-alquileres/">
-    <meta property="og:title" content="La pequeña empresa que nunca mereció un empleado — RailsPilot">
-    <meta property="og:description" content="Cinco propiedades, contratos distintos, índices que no coinciden. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <meta property="og:title" content="Cinco propiedades y demasiadas cosas para recordar — RailsPilot">
+    <meta property="og:description" content="Contratos distintos, ajustes de alquiler, vencimientos y papeles repartidos. Cómo construí un agente para organizar la información de cinco propiedades.">
     <meta property="og:image" content="https://www.railspilot.ai/logo.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="La pequeña empresa que nunca mereció un empleado — RailsPilot">
-    <meta name="twitter:description" content="Cinco propiedades, contratos distintos, índices que no coinciden. Un agente lee la carpeta y responde citando de dónde sale cada dato.">
+    <meta name="twitter:title" content="Cinco propiedades y demasiadas cosas para recordar — RailsPilot">
+    <meta name="twitter:description" content="Contratos distintos, ajustes de alquiler, vencimientos y papeles repartidos. Cómo construí un agente para organizar la información de cinco propiedades.">
     <meta name="twitter:image" content="https://www.railspilot.ai/logo.png">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "La pequeña empresa que nunca mereció un empleado",
-      "description": "Cinco propiedades, contratos distintos, índices que no coinciden, y la información repartida entre PDFs escaneados, audios y la memoria de tres personas. Un agente lee la carpeta y responde citando de dónde sale cada dato.",
+      "headline": "Cinco propiedades y demasiadas cosas para recordar",
+      "description": "Contratos distintos, ajustes de alquiler, vencimientos y papeles repartidos. Cómo construí un agente para organizar la información de cinco propiedades.",
       "url": "https://www.railspilot.ai/case_studies/cartera-alquileres/",
       "inLanguage": "es",
       "author": {
@@ -54,111 +54,94 @@
     <header class="case-header">
       <div class="container">
         <a href="../index.html">← RailsPilot</a>
-        <h1>La pequeña empresa que nunca mereció un empleado</h1>
+        <h1>Cinco propiedades y demasiadas cosas para recordar</h1>
       </div>
     </header>
 
     <div class="article-wrap">
       <div class="container">
         <article class="article">
-          <p class="lead">Esta semana la inmobiliaria le escribió a un cliente: "se viene el ajuste del alquiler del dúplex, ¿aplicamos el índice conversado o seguimos con el del contrato?". Él sabe de qué propiedad se trata, y que conversaron un cambio. Pero no recuerda si la conversación resultó en un compromiso de palabra o si solo esbozaba una posibilidad, no sabe la proyección de precio de cada alternativa, ni qué índice definía el contrato. Al cajón de los papeles, que deseaba mantener cerrado por más tiempo.</p>
+          <p>La inmobiliaria escribió al dueño de un dúplex: «Se viene el ajuste del alquiler. ¿Aplicamos el índice que conversamos o seguimos con el del contrato?».</p>
 
-          <p>Quien administra varias propiedades, sea por cantidad o porque no es su trabajo principal, se encuentra con el problema: la información se reparte entre documentos de papel, a veces escaneados, a veces en la escribanía, y con el contexto escondido en audios de WhatsApp y la memoria de al menos tres personas distintas. Todos los meses la contadora pregunta al dueño de cuánto es cada alquiler para emitir facturas correctas, y la respuesta llega errada o tarde, y siempre con dudas.</p>
+          <p>Él sabía de qué propiedad se trataba. Recordaba que habían hablado de cambiar el índice, pero no si habían llegado a un acuerdo. Tampoco tenía presente qué decía exactamente el contrato, ni cuánto daría el alquiler con cada alternativa.</p>
 
-          <p>Armé un agente para actuar de cerebro en esta pequeña empresa que nunca mereció un empleado. Lo llamo Olmo. Vive en un directorio de archivos, una carpeta por inmueble, cada una con sus escrituras, boletos, contratos de alquiler, recibos, y notas particulares de cada propiedad, inquilino y socio cuando aplica. Sabe leer PDFs, hace cuentas de fechas y de dinero, y responde citando la fuente original de cada dato. Entiende también la forma de esta sociedad, y cuánto corresponde a cada socio en cada momento.</p>
+          <p>Una pregunta sencilla. Para responderla había que abrir el cajón de los papeles, buscar el contrato y reconstruir una conversación de meses atrás.</p>
+
+          <p>El problema no era la falta de información. Era encontrarla.</p>
+
+          <h2>La información está, pero ¿quién sabe dónde?</h2>
+
+          <p>En esta pequeña cartera de cinco propiedades, cada inmueble tiene su historia. Contratos firmados en distintos años, ajustes por índices diferentes, escrituras, recibos, acuerdos particulares y documentación que fue quedando repartida entre carpetas, mensajes de WhatsApp, la contadora y la inmobiliaria.</p>
+
+          <p>Todos los meses aparecen preguntas parecidas: ¿cuánto corresponde facturar? ¿Cuándo se actualiza este alquiler? ¿Qué recibimos efectivamente? ¿Cuándo vence el contrato? ¿Qué habíamos acordado con este inquilino?</p>
+
+          <p>La respuesta suele existir, pero encontrarla lleva tiempo. Y muchas veces depende de que alguien recuerde dónde buscar.</p>
 
           <figure>
             <img src="diagrama-antes.svg" alt="Diagrama: la información repartida entre la inmobiliaria, la escribanía, la contadora, audios de WhatsApp, fotos de recibos y el cajón de contratos. Ninguna fuente tiene la respuesta completa." width="800" height="440">
           </figure>
 
-          <h2>Ajustes: qué índice de precios, y cada cuánto</h2>
+          <p>Para resolverlo armé <strong>Olmo, un agente de inteligencia artificial que conoce los documentos de esta pequeña cartera y ayuda a administrarla</strong>.</p>
 
-          <p>Cada contrato ajusta distinto porque se firman en años distintos: IPC, índice Casa Propia, y los más viejos con un porcentaje mínimo cada seis meses. <strong>La cadencia importa tanto como el índice.</strong> Un ajuste trimestral sobre un índice que se mueve rápido compone distinto que uno semestral, y confundirlos es cobrar de menos cuatro meses o sorprender al inquilino con un número que no cuadra.</p>
-
-<pre class="agent-response"><code>> Cliente: ¿cuándo corresponde el próximo ajuste del dúplex?
-
-Olmo: Contrato firmado 01/08/2023, ajuste trimestral por índice Casa Propia
-(cláusula 4, duplex-centro/contratos-alquiler/contrato-2023.pdf). Último ajuste
-aplicado: 01/05/2026, canon actual $415.000. Próximo ajuste: 01/08/2026,
-faltan 12 días. El dato del índice para ese mes todavía no está
-publicado. Sugiero avisar al inquilino con el mecanismo de cálculo
-y aplicar cuando salga el número oficial.</code></pre>
-
-          <h2>Cómo lo armamos</h2>
-
-          <p>Primero, los papeles se tienen que poder encontrar y leer. El paso cero fue juntar todo en un solo lugar, digitalizarlo y ordenarlo: verificar si cada documento tiene texto, y si no lo tiene, pasarlo por reconocimiento óptico, enderezarlo, limpiarlo y comprimirlo. Sin preprocesamiento un agente inventa, o consume 3 dólares de cómputo para entender cuándo se actualiza un alquiler. <strong>La IA es tan buena como su contexto, ordenar la información es la tarea principal</strong>.</p>
-
-          <p>Los documentos van a subcarpetas por propiedad:</p>
-
-<pre><code>propiedades/duplex-centro/
-├── AGENTS.md
-├── contratos-alquiler
-│   ├── contrato-2025-renovacion.pdf
-│   └── contrato-2023.pdf
-├── documentos
-│   ├── 2021-04-24-escritura.pdf
-│   └── 2021-06-10-inscripcion-registral.pdf
-└── recibos
-    ├── 2025-01.pdf
-    ├── 2025-02.pdf
-    └── 2025-04.pdf</code></pre>
-
-          <p>Cada carpeta tiene su propio <code>AGENTS.md</code>, y Olmo lo lee antes que nada, siempre. Ahí viven las notas especiales: "este contrato ajusta 10% cada cuatro meses desde marzo", "el inquilino paga una parte en dólares, ver anexo".</p>
-
-          <p>Hay <strong>límites que lo hacen confiable</strong>. Olmo solo puede agregar cambios, nunca eliminar o reemplazar. Si un documento está mal, lo arregla una persona. Sobre la planilla de cuentas escribe celdas de datos, nunca fórmulas: los cálculos de rentabilidad los escribió el dueño en un formato que le es útil hace tiempo, y quedan intactos.</p>
+          <p>Nació de una necesidad concreta: poder consultar la información de las propiedades sin tener que reconstruirla cada vez con distintas personas.</p>
 
           <figure>
-            <img src="diagrama-despues.svg" alt="Diagrama: la inmobiliaria le reenvía archivos a Olmo. El agente los guarda donde corresponde en un directorio ordenado por propiedad, lo lee, y responde al dueño, al socio y a la contadora citando la fuente de cada dato. Sobre la planilla escribe celdas de datos, nunca fórmulas." width="800" height="440">
+            <img src="diagrama-despues.svg" alt="Diagrama: la inmobiliaria le manda los papeles a Olmo. El agente los guarda en una carpeta por propiedad, los lee y responde al dueño, al socio y a la contadora citando el documento. En la planilla de cuentas completa datos sin tocar las fórmulas." width="800" height="440">
           </figure>
 
-          <h2>Vencimientos con margen para actuar</h2>
+          <h2>Contratos que se pueden consultar</h2>
 
-<pre class="agent-response"><code>> Cliente: agendar en mi calendario un recordatorio
-> 60 días antes del vencimiento de cada contrato
+          <p>Los contratos de alquiler no son todos iguales. Algunos ajustan por IPC, otros por Casa Propia y otros establecen porcentajes fijos. También cambian las frecuencias: trimestral, cuatrimestral.</p>
 
-Olmo: Tres eventos creados con vos como único invitado:
-Dos ambientes — 21/09/2026, 10:00-10:30
-Duplex centro — 03/05/2027, 10:00-10:30
-Local 4 — 03/12/2026, 10:00-10:30
+          <p>Olmo puede leer esos contratos, identificar las cláusulas relevantes y calcular cuándo corresponde el próximo ajuste.</p>
 
-Casa Peña queda afuera: no tiene el contrato cargado, así que
-no puedo calcular la fecha. Vale la pena conseguirlo.
+          <p>En el caso del dúplex, por ejemplo, identificó el índice, la frecuencia de actualización, el último ajuste aplicado y la próxima fecha. Como el índice necesario todavía no estaba publicado, no inventó un importe: explicó qué información faltaba y sugirió cómo proceder.</p>
 
-> Cliente: ¿algún vencimiento próximo en que deba enfocarme?
+          <figure class="chat">
+            <p class="chat-msg chat-msg--user">¿Cuándo corresponde el próximo ajuste del dúplex?</p>
+            <div class="chat-msg chat-msg--agent">
+              <span class="chat-name">Olmo</span>
+              <p>El contrato ajusta cada tres meses por el índice Casa Propia. El último ajuste fue el 1 de mayo y el alquiler quedó en $415.000. El próximo corresponde el 1 de agosto, dentro de 12 días.</p>
+              <p>El índice de ese mes todavía no se publicó. Sugiero avisarle al inquilino cómo se va a calcular y aplicar el ajuste cuando salga el número oficial.</p>
+              <span class="chat-source">Fuente: contrato de 2023, cláusula 4</span>
+            </div>
+          </figure>
 
-Olmo: Dos ambientes vence el 20/11/2026 (faltan 21 días).
-Contrato original de 7 páginas, cláusulas poco claras
-sobre quién decide las mejoras. Sugiero renovar con el modelo
-corto de 2 páginas que se usa en las propiedades nuevas, si el
-inquilino está de acuerdo. Borrador de aviso a la administradora
-en salida/aviso-dos-ambientes.md.</code></pre>
+          <p><strong>Cada respuesta incluye la referencia al documento del que obtuvo la información.</strong> No hace falta confiar ciegamente en lo que dice el agente: se puede revisar la cláusula original.</p>
 
-          <p>Olmo marca todo lo que cae dentro de una ventana de 60 días, y deja escrito el borrador del aviso a la inmobiliaria y el evento de calendario.</p>
+          <h2>Vencimientos antes de que se conviertan en urgencias</h2>
 
-          <h2>Cuentas: facturación, pagos y comisiones</h2>
+          <p>Otra tarea habitual es controlar los vencimientos. Le pedí a Olmo que agendara recordatorios 60 días antes del fin de cada contrato. Creó los eventos en el calendario y dejó afuera una propiedad cuyo contrato no estaba cargado. En lugar de inventar una fecha, señaló que faltaba documentación.</p>
 
-          <p>Olmo ayuda a emitir cada factura para cada inmueble, cada mes. Mantiene la suma de facturación de los últimos doce meses móviles y avisa si el acumulado se acerca al límite del monotributo.</p>
+          <p>También puede identificar próximos vencimientos y preparar borradores de avisos.</p>
 
-          <p>También cruza lo esperado contra lo recibido:</p>
+          <p>La decisión de renovar, negociar condiciones o comunicarse con el inquilino sigue siendo humana. Olmo ayuda a tener la información preparada con anticipación.</p>
 
-<pre class="agent-response"><code>> Cliente: hacer reconciliaciones de pagos de marzo
+          <h2>Facturación y pagos sin reconstruir todo cada mes</h2>
 
-Olmo: Dos ambientes: esperado $380.000, recibido $380.000, OK.
-Dúplex: esperado $415.000, recibido $460.000, diferencia de
-+$45.000 sin liquidación asociada. La última liquidación
-es de febrero. Revisar antes de asentar.</code></pre>
+          <p>Olmo también ayuda con las cuentas: determinar qué corresponde facturar por propiedad, mantener el acumulado de facturación de los últimos doce meses y advertir cuando se acerca al límite del monotributo.</p>
 
-          <p>Y está la comisión mensual de la administradora, que según el acuerdo cubre "administración integral". Al listar contra qué se facturó esa comisión durante doce meses aparecieron: reenviar por mail una factura de servicios, y dos meses cobrados sin liquidación que los justifique. Es la deriva normal de un servicio que nadie vuelve a leer, y <strong>se ve cuando alguien mira doce meses de papel de una sentada</strong>.</p>
+          <p>Puede comparar los pagos esperados con los recibidos. En una conciliación encontró un alquiler del que se esperaban $415.000, pero se habían recibido $460.000 sin una liquidación que explicara la diferencia.</p>
 
-          <h2>Qué pasa con la rentabilidad</h2>
+          <p>No decidió cómo contabilizarla. Marcó la discrepancia para que alguien la revisara.</p>
 
-          <p>El número que importa a fin de año es la rentabilidad neta por propiedad, y cambia mucho según cómo se cuente la comisión del intermediario. En una de las propiedades el alquiler bruto anual dio cerca del 8,5% del valor de compra; descontando comisión, seguro y mantenimiento promedio, bajó a 6,1%. La misma propiedad administrada de forma directa, con los mismos supuestos de mantenimiento, daba alrededor de 7,3%. Ese 1,2% sugiere la pregunta: ¿cubre su valor la administración con esta inmobiliaria?</p>
+          <h2>La parte menos vistosa, pero más importante</h2>
 
-          <br><br>
-          <hr>
-          <br>
+          <p>Antes de construir Olmo hubo que juntar los documentos, digitalizarlos y organizarlos. <strong>La calidad de las respuestas depende de la información disponible.</strong> Si falta un contrato, hay que conseguirlo. Si un documento está equivocado, una persona debe corregirlo.</p>
 
-          <p>Todo esto pide disciplina: leer el papelerío todas las veces, y no una vez al firmar.<br><strong>Tedioso para una persona y simple para nuestro agente</strong>.</p>
+          <p>También establecí límites: Olmo puede agregar información, pero no eliminar ni reemplazar documentos existentes. En la planilla de cuentas que ya utilizaba un cliente, puede completar datos sin modificar las fórmulas.</p>
+
+          <p>La idea no fue cambiar toda la forma de trabajar, sino aprovechar mejor lo que ya existía.</p>
+
+          <h2>¿Y en una inmobiliaria?</h2>
+
+          <p>Una inmobiliaria tiene algo que esta pequeña cartera no tiene: muchos más inmuebles, propietarios, inquilinos y personas que necesitan consultar información.</p>
+
+          <p>El problema que motivó la construcción de Olmo es el mismo: información dispersa, consultas repetitivas y tareas que requieren volver una y otra vez a los mismos documentos o memoria de algún individuo.</p>
+
+          <p>No se trata de reemplazar al administrador ni su criterio. Tampoco de descartar los sistemas que ya funcionan. Se trata de explorar qué tareas concretas pueden resolverse mejor cuando la información está organizada y se puede consultar fácilmente.</p>
+
+          <p>Si administrás propiedades y reconocés alguno de estos problemas, podemos conversar sobre cómo abordarlo en tu operación.</p>
         </article>
       </div>
     </div>
